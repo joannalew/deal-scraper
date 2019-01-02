@@ -25,6 +25,7 @@ We will need to:
 - [ ] Note functionality in data visualization
 - [ ] Send user an email only if item is less than User-set price threshold
 - [ ] Search all items being tracked
+- [ ] Assess potential resell value
 
 ### Technologies and Technical Challenges
 We plan to use:
@@ -46,35 +47,35 @@ Some challenges we expect to encounter are:
 * We wrote the README and planned out our schedule for the upcoming week
 
 ### Group Members and Work Breakdown
-** Dennis Myasnyankin, Daniel Moon, Jerrik Shaw, Joanna Lew ** 
+**Dennis Myasnyankin, Daniel Moon, Jerrik Shaw, Joanna Lew** 
 
-Day 1
-Jerrik & Dennis - User authentication
-Jerrik & Dennis - Save Users to database
-Joanna & Daniel - Create web crawler
-Joanna & Daniel - Get prices from various sites, sites to be decided
+##### Day 1
+* Jerrik & Dennis - User authentication
+* Jerrik & Dennis - Save Users to database
+* Joanna & Daniel - Create web crawler
+* Joanna & Daniel - Get prices from various sites, sites to be decided
 
-Day 2
-Jerrik & Dennis - Signup and login forms, signout button
-Jerrik & Dennis - Session with jwt authentication
-Joanna & Daniel - Create item with price info from web crawler
-Joanna & Daniel - Save item and prices to database
+##### Day 2
+* Jerrik & Dennis - Signup and login forms, signout button
+* Jerrik & Dennis - Session with jwt authentication
+* Joanna & Daniel - Create item with price info from web crawler
+* Joanna & Daniel - Save item and prices to database
 
-Day 3 
-Jerrik & Dennis - Data visualization animations, graphs
-Joanna & Daniel - Create item form, item info container
+##### Day 3 
+* Jerrik & Dennis - Data visualization animations, graphs
+* Joanna & Daniel - Create item form, item info container
 
-Day 4
-Jerrik & Dennis - Email User if item goes on sale
-Joanna & Daniel - Allow User to 'follow' items they want to price track
-All - begin seeding database
+##### Day 4
+* Jerrik & Dennis - Email User if item goes on sale
+* Joanna & Daniel - Allow User to 'follow' items they want to price track
+* All - begin seeding database
 
-Day 5
-All - finish frontend pages, finish CSS
-All - add more seeds to database
-All - fix any bugs, remove console logs
-All - make sure heroku is up
+##### Day 5
+* All - finish frontend pages, finish CSS
+* All - add more seeds to database
+* All - fix any bugs, remove console logs
+* All - make sure heroku is up
 
-Day 6
-Jerrik & Dennis - Search feature for items currently in database
-Joanna & Daniel - Show items with most number of Users following
+##### Day 6
+* Jerrik & Dennis - Search feature for items currently in database
+* Joanna & Daniel - Show items with most number of Users following
