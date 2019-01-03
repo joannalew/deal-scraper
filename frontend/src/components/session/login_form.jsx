@@ -51,7 +51,6 @@ class LoginForm extends React.Component {
     render() {
 
         return (
-
             <form className='session-login-form'>
                 <input 
                     required
@@ -68,7 +67,7 @@ class LoginForm extends React.Component {
                     placeholder="Password"
                 />
                 <button onClick={this.handleSubmit}>Login</button>
-                {this.renderErrors}
+                {this.renderErrors()}
             </form>
         )
     }
