@@ -28,4 +28,21 @@ router.post('/create', (req, res) => {
         })
 });
 
+router.get('/:id', (req, res) => {
+    Item.findById(req.params.id)
+        .then(item => res.json(item))
+        .catch(err =>
+            res.status(404).json({ noitemfound: 'No item found with that ID' })
+        );
+});
+
+router.get('/store/:store_name', (req, res) => {
+    Item.find({store: req.params.store_name})
+        .then(items => res.json(items))
+        .catch(err =>
+            res.status(404).json({ noitemsfound: 'No items found from that store' }
+        )
+    );
+});
+
 module.exports = router;
