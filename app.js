@@ -55,6 +55,7 @@ app.get('/ebay', function(req, res) {
                 idArray.push(items[i].itemId[0]);
                 itemInfo[idArray.length] = 
                     {
+                     store: 'ebay',
                      storeId: items[i].itemId[0], 
                      storeUrl: items[i].viewItemURL[0],
                      storeImg: items[i].galleryURL[0],
@@ -62,7 +63,7 @@ app.get('/ebay', function(req, res) {
                      price: items[i].sellingStatus[0].convertedCurrentPrice[0].__value__ + ' ' + items[i].sellingStatus[0].currentPrice[0]['@currencyId']
                     };
             }
-            
+
             res.send(itemInfo); 
         }
     })
