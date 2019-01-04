@@ -5,7 +5,7 @@ export default (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_ITEM:
-            return action.item;
+            return {[action.item._id]: action.item};
         default:
             return state;
     }
