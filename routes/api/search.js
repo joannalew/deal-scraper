@@ -8,15 +8,27 @@ const ebayKey = require('../../config/keys').ebayAPIKey;
 router.get('/', (req, res) => res.json({msg: "This is the search route"}));
 router.get("/test", (req, res) => res.json({ msg: "This is the search test route" }));
 
-const getImageFromEbay = function(url) {
-    request(url, function (error, response, html) {
-        if (!error) {
-            var $ = cheerio.load(html);
-            var src = $('#icImg').attr('src');
-            console.log(src);
-            return src;
-        }
-    });
+const changeImageFromEbay = function(items, images, res) {
+    for (var key in items) {
+        items[key].storeImg = images[parseInt(key) - 1]
+    }
+    res.send(items);
+}
+
+const getImageFromEbay = function(itemObj, res) {
+    let picAry = [];
+
+    for (var key in itemObj) {
+        let url = itemObj[key].storeUrl;
+        request(url, function (error, response, html) {
+            if (!error) {
+                var $ = cheerio.load(html);
+                var src = $('#icImg').attr('src');
+                picAry.push(src);
+                changeImageFromEbay(itemObj, picAry, res);
+            }
+        });
+    }
 };
 
 router.get('/image', function(req, res) {
@@ -25,7 +37,6 @@ router.get('/image', function(req, res) {
         if (!error) {
             var $ = cheerio.load(html);
             var src = $('#icImg').attr('src');
-            console.log(src);
             res.send(src);
         }
     });
@@ -62,17 +73,19 @@ router.get('/ebay', function(req, res) {
             for (let i = 0; i < count; i++) {
                 if (idArray.includes(items[i].itemId[0])) { continue; }
                 idArray.push(items[i].itemId[0]);
+
                 itemInfo[idArray.length] = 
                     {
-                     store: 'ebay',
-                     storeId: items[i].itemId[0], 
-                     storeUrl: items[i].viewItemURL[0],
-                     storeImg: items[i].galleryURL[0],
-                     title: items[i].title[0],
-                     price: items[i].sellingStatus[0].convertedCurrentPrice[0].__value__ + ' ' + items[i].sellingStatus[0].currentPrice[0]['@currencyId']
+                      store: 'ebay',
+                      storeId: items[i].itemId[0], 
+                      storeUrl: items[i].viewItemURL[0],
+                      storeImg: items[i].galleryURL[0],
+                      title: items[i].title[0],
+                      price: items[i].sellingStatus[0].convertedCurrentPrice[0].__value__ + ' ' + items[i].sellingStatus[0].currentPrice[0]['@currencyId']
                     };
             }
-            res.send(items); 
+
+            getImageFromEbay(itemInfo, res);
         }
     })
 });
