@@ -55,7 +55,7 @@ class LoginForm extends React.Component {
                 <input 
                     required
                     value={this.state.email}
-                    type="text"
+                    type="email"
                     onChange={this.update('email')}
                     placeholder='Email'
                 />
