@@ -31,17 +31,6 @@ const getImageFromEbay = function(itemObj, res) {
     }
 };
 
-router.get('/image', function(req, res) {
-    var url = 'https://www.ebay.com/itm/2018-Nike-Air-Jordan-Retro-11-XI-Concord-White-Black-378037-100-GS-MEN-size-4-13-/192743933627?var=0';
-    request(url, function (error, response, html) {
-        if (!error) {
-            var $ = cheerio.load(html);
-            var src = $('#icImg').attr('src');
-            res.send(src);
-        }
-    });
-});
-
 router.get('/ebay', function(req, res) {
     let callback = '_cb_findItemsByKeywords';
     let keywords = 'nike%20air%20jordan';
