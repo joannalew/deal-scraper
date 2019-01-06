@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchResultContainer from './search_result_container';
 
 class Search extends React.Component {
     constructor(props) {
@@ -14,28 +15,32 @@ class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.fetchResults(this.state)
-            .then(() => console.log("success"))
+            .then(() => console.log("success"));
     }
 
     render() {
-        console.log("props", this.props);
-        console.log("state", this.state);
         return (
             <div>
-                <form onSubmit={ this.handleSubmit }>
-                    <div>
-                        <label>
-                            <span>Find</span>
-                            <span>
-                                <input type="text" value={this.state.query} onChange={this.update('query')} />
-                            </span>
-                        </label>
-                    </div>
+                <div>
+                    <form onSubmit={ this.handleSubmit }>
+                        <div>
+                            <label>
+                                <span>Find</span>
+                                <span>
+                                    <input type="text" value={this.state.query} onChange={this.update('query')} />
+                                </span>
+                            </label>
+                        </div>
 
-                    <div>
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div>
+                    <SearchResultContainer />
+                </div>
             </div>
         );
     }
