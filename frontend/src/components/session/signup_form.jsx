@@ -9,7 +9,8 @@ class SignupForm extends React.Component {
         this.state = {
             email: '',
             username: '',
-            password: ''
+            password: '',
+            password2: ''
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,7 +46,7 @@ class SignupForm extends React.Component {
     render() {
 
         return (
-            <form className='session-login-form'>
+            <form className='session-login-form' onSubmit={this.handleSubmit}>
                 <input
                     required
                     type="text"
@@ -67,7 +68,14 @@ class SignupForm extends React.Component {
                     onChange={this.update('password')}
                     placeholder="Password"
                 />
-                <button onClick={this.handleSubmit}>Signup</button>
+                <input
+                    required
+                    value={this.state.password2}
+                    type="password"
+                    onChange={this.update('password2')}
+                    placeholder="Confirm Password"
+                />
+                <input type="submit" value="Signup"/>
                 {this.renderErrors()}
             </form>
         )
