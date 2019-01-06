@@ -10,21 +10,11 @@ const ebayKey = require('../../config/keys').ebayAPIKey;
 router.get('/', (req, res) => res.json({ msg: "This is the search route" }));
 router.get("/test", (req, res) => res.json({ msg: "This is the search test route" }));
 
-<<<<<<< HEAD
-const getImageFromEbay = function (itemObj, res) {
-=======
 const getImageFromEbay = async function(itemObj, res) {
->>>>>>> 63e0be3bf0feeda397d34ad0d4c0c0e1395c59b2
     var promiseArray = [];
 
     for (let key in itemObj) {
         let url = itemObj[key].storeUrl;
-<<<<<<< HEAD
-        promiseArray.push(new Promise((resolve, reject) =>
-            request(url, function (error, response, html) {
-                if (error) { reject(error); }
-                resolve(html);
-=======
         promiseArray.push(new Promise((resolve, reject) => 
             request(url, function (error, response, html) {
                 if (error) { reject(error); }
@@ -32,22 +22,14 @@ const getImageFromEbay = async function(itemObj, res) {
                 var src = $('#icImg').attr('src');
                 itemObj[key].storeImg = src;
                 resolve(itemObj[key]);
->>>>>>> 63e0be3bf0feeda397d34ad0d4c0c0e1395c59b2
             })
         ))
     }
 
-<<<<<<< HEAD
-    res.send(Promise.all(promiseArray));
-};
-
-router.get('/ebay/:keywords', function (req, res) {
-=======
     res.send({ items: await Promise.all(promiseArray) });
 };
 
 router.get('/ebay/:keywords', function(req, res) {
->>>>>>> 63e0be3bf0feeda397d34ad0d4c0c0e1395c59b2
     let callback = '_cb_findItemsByKeywords';
     let keywords = req.params.keywords;
 
@@ -80,20 +62,11 @@ router.get('/ebay/:keywords', function(req, res) {
 
                 itemInfo[idArray.length] =
                     {
-<<<<<<< HEAD
-                        store: 'ebay',
-                        storeId: items[i].itemId[0],
-                        storeUrl: items[i].viewItemURL[0],
-                        storeImg: items[i].galleryURL[0],
-                        title: items[i].title[0],
-                        price: items[i].sellingStatus[0].convertedCurrentPrice[0].__value__ + ' ' + items[i].sellingStatus[0].currentPrice[0]['@currencyId']
-=======
                       store: 'ebay',
                       storeId: items[i].itemId[0], 
                       storeUrl: items[i].viewItemURL[0],
                       title: items[i].title[0],
                       price: items[i].sellingStatus[0].convertedCurrentPrice[0].__value__ + ' ' + items[i].sellingStatus[0].currentPrice[0]['@currencyId']
->>>>>>> 63e0be3bf0feeda397d34ad0d4c0c0e1395c59b2
                     };
             }
 
