@@ -13,7 +13,7 @@ export const getItem = (id) => dispatch => {
 const receiveErrors = (errors) => ({
     type: RECEIVE_ITEM_ERRORS,
     errors
-})
+});
 
 
 const receiveItem = (res) => ({
