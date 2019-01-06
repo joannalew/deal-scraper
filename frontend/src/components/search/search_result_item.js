@@ -11,6 +11,7 @@ const SearchResultItem = ( props ) => {
             <div>{ props.idx }</div>
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
+            <img src={props.item.storeImg} />
             <div>
                 <button onClick={ handleClick(props.item, props.createNewItem) }>Save Item</button>
             </div>

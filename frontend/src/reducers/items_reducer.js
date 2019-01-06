@@ -1,4 +1,4 @@
-import { RECEIVE_NEW_ITEM } from '../actions/items_actions';
+import { RECEIVE_NEW_ITEM } from '../actions/item_actions';
 
 const ItemsReducer = (state = {}, action) => {
     Object.freeze(state);

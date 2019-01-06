@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNewItem } from '../../actions/items_actions';
+import { createNewItem } from '../../actions/item_actions';
 import SearchResultItem from './search_result_item';
 
 const mapStateToProps = (state, ownProps) => ({
