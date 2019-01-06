@@ -1,13 +1,18 @@
 import React from 'react';
 
-const SearchResultItem = ({ item, idx }) => {
+const handleClick = function(item, createFunc) {
+    return () => { createFunc(item) }
+};
+
+const SearchResultItem = ( props ) => {
+    console.log('props', props);
     return (
         <li>
-            <div>{ idx }</div>
-            <div>{ item.title }</div>
-            <div>{ item.price }</div>
+            <div>{ props.idx }</div>
+            <div>{ props.item.title }</div>
+            <div>{ props.item.price }</div>
             <div>
-                <button>Follow Item</button>
+                <button onClick={ handleClick(props.item, props.createNewItem) }>Save Item</button>
             </div>
         </li>
     )
