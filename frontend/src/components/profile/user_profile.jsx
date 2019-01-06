@@ -1,4 +1,5 @@
 import React from 'react';
+import './user_profile.css';
 
 class UserProfile extends React.Component {
 
@@ -7,8 +8,8 @@ class UserProfile extends React.Component {
         return (
             <div className='user-profile'>
                 <div className='user-profile-info'>
-                    <div className='user-profile-img'>
-                        <img src="https://profiles.utdallas.edu/img/default.png" alt=""/>
+                    <div >
+                        <img className='user-profile-img' src="https://profiles.utdallas.edu/img/default.png" alt=""/>
                     </div>
                     <div className='user-profile-details'>
                         <div className='user-profile-username'>{this.props.user.username}</div>
