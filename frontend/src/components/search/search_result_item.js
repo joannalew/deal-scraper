@@ -6,6 +6,9 @@ const SearchResultItem = ({ item, idx }) => {
             <div>{ idx }</div>
             <div>{ item.title }</div>
             <div>{ item.price }</div>
+            <div>
+                <button>Follow Item</button>
+            </div>
         </li>
     )
 };
