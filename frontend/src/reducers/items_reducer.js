@@ -1,12 +1,15 @@
-import { RECEIVE_ITEM } from '../actions/item_actions';
+import { RECEIVE_ITEM, RECEIVE_NEW_ITEM } from '../actions/item_actions';
 
-export default (state = {}, action) => {
+const ItemsReducer = (state = {}, action) => {
     Object.freeze(state);
-
-    switch (action.type) {
+    switch(action.type) {
+        case RECEIVE_NEW_ITEM:
+            return action.item.data;
         case RECEIVE_ITEM:
             return {[action.item._id]: action.item};
         default:
             return state;
     }
-};
+}
+
+export default ItemsReducer;
