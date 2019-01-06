@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 import ItemShow from './item_show';
 import { getItem } from '../../actions/item_actions';
 
-const mapStateToProps = ({ entities }) => {
+const mapStateToProps = ({ entities }, ownProps) => {
 
+    let id = ownProps.match.params.id;
     return ({
-        item: entities.items
+        item: entities.items[id]
     });
 };
 
