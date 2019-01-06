@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/item_utils';
+import * as APIUtil from '../util/item_util';
 
 export const RECEIVE_ITEM = 'RECEIVE_ITEM';
 export const RECEIVE_ITEM_ERRORS = 'RECEIVE_ITEM_ERRORS';
