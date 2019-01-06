@@ -29,9 +29,9 @@ router.post('/register', (req, res) => {
         .then(user => {
             if (user) {
                 // Throw a 400 error if the email address already exists
-                // return res.status(400).json({ email: "A user has already registered with this email" })
-                errors.email = "Email is already in use";
-                return res.status(400).json(errors);
+                return res.status(400).json({ email: "A user has already registered with this email" })
+                // errors.email = "Email is already in use";
+                // return res.status(400).json(errors);
             } else {
                 // Otherwise create a new user
                 const newUser = new User({
@@ -54,6 +54,7 @@ router.post('/register', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
+    // console.log(req.body)
 
     const { errors, isValid } = validateLoginInput(req.body);
 
@@ -67,9 +68,9 @@ router.post('/login', (req, res) => {
     User.findOne({ email })
         .then(user => {
             if (!user) {
-                // return res.status(404).json({ email: 'This user does not exist' });
-                errors.email = "User not found";
-                return res.status(404).json(errors);
+                return res.status(404).json({ email: 'This user does not exist' });
+                // errors.email = "User not found";
+                // return res.status(404).json(errors);
             }
 
             bcrypt.compare(password, user.password)
