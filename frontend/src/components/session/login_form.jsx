@@ -49,7 +49,7 @@ class LoginForm extends React.Component {
     render() {
 
         return (
-            <form className='session-login-form'>
+            <form className='session-login-form' onSubmit={this.handleSubmit}>
                 <input 
                     required
                     value={this.state.email}
@@ -64,7 +64,7 @@ class LoginForm extends React.Component {
                     onChange={this.update('password')}
                     placeholder="Password"
                 />
-                <button onClick={this.handleSubmit}>Login</button>
+                <input type='submit' value='Login'/>
                 {this.renderErrors()}
             </form>
         )
