@@ -44,3 +44,18 @@
   box-sizing: border-box;
   overflow: scroll;
 }
+
+.ul-results li {
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style: none;
+    width: 33%;
+    margin: 75px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    -webkit-text-stroke: 1px black;
+    color: antiquewhite;
+}
+
+.ul-results:hover {
+    background-color: rgba(185, 185, 182, 0.3)
+}

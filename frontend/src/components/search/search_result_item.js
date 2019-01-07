@@ -7,7 +7,7 @@ const handleClick = function(item, user, createFunc) {
 const SearchResultItem = ( props ) => {
     console.log('props', props);
     return (
-        <li>
+        <li className="search-result-item">
             <div>{ props.idx }</div>
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
