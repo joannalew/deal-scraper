@@ -33,6 +33,29 @@ router.post('/create', (req, res) => {
         })
 });
 
+router.post('/follow', (req, res) => {
+    Item.findByID(req.body.item.id)
+        .then(item => {
+            item.followers.push(req.body.user.id)
+            item.save()
+                .then(updatedItem => res.json(updatedItem))
+                .catch(err => console.log(err));
+        })
+});
+
+router.post('/unfollow', (req, res) => {
+    Item.findByID(req.body.item.id)
+        .then(item => {
+            const index = items.followers.indexOf(req.body.user.id);
+            if (index > -1) {
+                item.followers.splice(index, 1);
+            }
+            item.save()
+                .then(updatedItem => res.json(updatedItem))
+                .catch(err => console.log(err))
+        })
+})
+
 router.get('/:id', (req, res) => {
     Item.findById(req.params.id)
         .then(item => res.json(item))
