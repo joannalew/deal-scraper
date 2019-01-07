@@ -56,9 +56,8 @@
 }
 
 .navbar_header_wrapper {
+    position: relative;
     min-width: 1020px;
-    background-image: url("https://i.pinimg.com/originals/ea/89/9a/ea899a258fe7f4b4ffaede007a6097ae.jpg");
-    background-size: cover;
 }
 
 .navbar_header {

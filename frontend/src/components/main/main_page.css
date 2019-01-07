@@ -2,11 +2,16 @@
     height: 500px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    background: black;
+    justify-content: flex-start;
 }
 
 .main_title {
     font-size: 50px;
     color: antiquewhite;
+}
+
+.main_block {
+    display: flex;
+    height: 500px;
+    width: 20%;
 }
