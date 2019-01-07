@@ -35,7 +35,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="navbar_header">
-                <div className="navbar_logo">Deal Cliq</div>
+                <i className="fas fa-hand-holding-usd"></i>
                 {this.getLinks()}
             </div>
         );
