@@ -26,6 +26,7 @@ class NavBar extends React.Component {
         } else {
             return (
                 <div className="session_links">
+                    <Link to={'/search'}>Search</Link>
                     <Link to={'/signup'}>Signup</Link>
                     <Link to={'/login'}>Login</Link>
                 </div>
