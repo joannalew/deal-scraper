@@ -31,22 +31,24 @@ router.post('/create', (req, res) => {
                        .catch(err => console.log(err));
             }
         })
+        .catch(err => {console.log(err)})
 });
 
 router.post('/follow', (req, res) => {
-    Item.findByID(req.body.item.id)
+    Item.findOne({ storeId: req.body.item.storeId })
         .then(item => {
             item.followers.push(req.body.user.id)
             item.save()
                 .then(updatedItem => res.json(updatedItem))
                 .catch(err => console.log(err));
         })
+        .catch(err => {console.log(err)})
 });
 
 router.post('/unfollow', (req, res) => {
-    Item.findByID(req.body.item.id)
+    Item.findOne({ storeId: req.body.item.storeId })
         .then(item => {
-            const index = items.followers.indexOf(req.body.user.id);
+            const index = item.followers.indexOf(req.body.user.id);
             if (index > -1) {
                 item.followers.splice(index, 1);
             }
@@ -54,6 +56,7 @@ router.post('/unfollow', (req, res) => {
                 .then(updatedItem => res.json(updatedItem))
                 .catch(err => console.log(err))
         })
+        .catch(err => {console.log(err)})
 })
 
 router.get('/:id', (req, res) => {
@@ -73,9 +76,13 @@ router.get('/store/:store_name', (req, res) => {
     );
 });
 
-router.get('/following/:id', (req, res) => {
-    Item.find({ followers: req.params.id })
-        .then(items => res.json(items))
+router.post('/following', (req, res) => {
+    Item.find({ followers: req.body.user.id })
+        .then(items => {
+            let itemObj = {};
+            items.forEach(item => { itemObj[item._id] = item })
+            res.json(itemObj);
+        })
         .catch(err => console.log(err))
 })
 

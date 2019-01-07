@@ -1,19 +1,21 @@
 import { connect } from 'react-redux';
 import ItemShow from './item_show';
-import { getItem } from '../../actions/item_actions';
+import { getItem, addFollower, removeFollower } from '../../actions/item_actions';
 
-const mapStateToProps = ({ entities }, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
 
     let id = ownProps.match.params.id;
     return ({
-        item: entities.items[id]
+        item: state.entities.items[id],
+        user: state.session.user
     });
 };
 
 const mapDispatchToProps = dispatch => {
-
     return ({
-        getItem: (id) => dispatch(getItem(id))
+        getItem: (id) => dispatch(getItem(id)),
+        addFollower: data => dispatch(addFollower(data)),
+        removeFollower: data => dispatch(removeFollower(data))
     });
 };
 
