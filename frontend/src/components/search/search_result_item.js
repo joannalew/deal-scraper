@@ -5,7 +5,6 @@ const handleClick = function(item, user, createFunc) {
 };
 
 const SearchResultItem = ( props ) => {
-    console.log('props', props);
     return (
         <li className="search-result-item">
             <img src={props.item.storeImg} />
