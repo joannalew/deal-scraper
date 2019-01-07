@@ -34,8 +34,10 @@ class UserProfile extends React.Component {
                         <div className='user-profile-watch-count'>Number of items watched: { numFollows }</div>
                     </div>
                 </div>
-                <div className='user-profile-watchlist'>
-                    { results }
+                <div className='watchlist-wrapper'>
+                    <div className='user-profile-watchlist'>
+                        { results }
+                    </div>
                 </div>
             </div>
         )

@@ -20,10 +20,9 @@ const getButton = function(item, user, addFunc, removeFunc) {
 const UserProfileItem = ( props ) => {
     return (
         <li>
-            <div>{ props.idx }</div>
+            <img src={ props.item.storeImg } />
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
-            <img src={ props.item.storeImg } />
             <div>
                 { getButton(props.item, props.currentUser, props.addFollower, props.removeFollower) }
             </div>
