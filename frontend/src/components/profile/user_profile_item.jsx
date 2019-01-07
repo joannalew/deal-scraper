@@ -1,5 +1,4 @@
 import React from 'react';
-import './user_profile_item.css';
 
 const addFollowClick = function(item, user, addFunc) {
     return () => { addFunc({item: item, user: user}) }
