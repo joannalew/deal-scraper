@@ -83,7 +83,9 @@ class SignupForm extends React.Component {
                         {this.renderErrors()}
                     </form>
                     <div className='session-form-image-wrapper'>
-                        <div className='session-form-image'></div>
+                        <div className='session-form-image'>
+                            <i className="fas fa-hand-holding-usd"></i>
+                        </div>
                     </div>
                 </div>
             </div>
