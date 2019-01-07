@@ -6,12 +6,10 @@ const handleClick = function(item, user, createFunc) {
 
 const SearchResultItem = ( props ) => {
     return (
-        <li>
-            <div>{ props.idx }</div>
+        <li className="search-result-item">
+            <img src={props.item.storeImg} />
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
-            <div>{ props.currentUser.email }</div>
-            <img src={ props.item.storeImg } />
             <div>
                 <button onClick={ handleClick(props.item, props.currentUser, props.createNewItem) }>Save Item</button>
             </div>
