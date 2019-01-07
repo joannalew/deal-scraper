@@ -1,11 +1,13 @@
 const express = require("express");
 const request = require('request');
+const Promise = require('promise');
+const rp = require('request-promise');
 const cheerio = require('cheerio');
 const router = express.Router();
 
 const ebayKey = require('../../config/keys').ebayAPIKey;
 
-router.get('/', (req, res) => res.json({msg: "This is the search route"}));
+router.get('/', (req, res) => res.json({ msg: "This is the search route" }));
 router.get("/test", (req, res) => res.json({ msg: "This is the search test route" }));
 
 const getImageFromEbay = async function(itemObj, res) {
@@ -34,14 +36,14 @@ router.get('/ebay/:keywords', function(req, res) {
     var url = "http://svcs.ebay.com/services/search/FindingService/v1";
     url += "?OPERATION-NAME=findItemsByKeywords";
     url += "&SERVICE-VERSION=1.0.0";
-    url += `&SECURITY-APPNAME=${ ebayKey }`;
+    url += `&SECURITY-APPNAME=${ebayKey}`;
     url += "&GLOBAL-ID=EBAY-US";
     url += "&RESPONSE-DATA-FORMAT=JSON";
-    url += `&callback=${ callback }`;
+    url += `&callback=${callback}`;
     url += "&REST-PAYLOAD";
-    url += `&keywords=${ keywords }`;
+    url += `&keywords=${keywords}`;
 
-    request(url, function(error, response) {
+    request(url, function (error, response) {
         if (!error) {
             let resStr = JSON.stringify(response);
             let resObj = JSON.parse(resStr);
@@ -51,15 +53,14 @@ router.get('/ebay/:keywords', function(req, res) {
 
             let count = resReal.searchResult[0]['@count'];
             let items = resReal.searchResult[0].item;
-
             let itemInfo = {};
             let idArray = [];
-            
+
             for (let i = 0; i < count; i++) {
                 if (idArray.includes(items[i].itemId[0])) { continue; }
                 idArray.push(items[i].itemId[0]);
 
-                itemInfo[idArray.length] = 
+                itemInfo[idArray.length] =
                     {
                       store: 'ebay',
                       storeId: items[i].itemId[0], 
