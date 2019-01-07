@@ -34,14 +34,18 @@
     padding: 3px;
 } */
 
+.ul-results-wrapper {
+    min-width: 1000px;
+}
+
 .ul-results {
   background: transparent;
-  width: 100%;
+  max-width: 1000px;
+  margin: auto;
   height: 500px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  box-sizing: border-box;
   overflow: scroll;
 }
 

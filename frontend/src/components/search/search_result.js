@@ -14,7 +14,7 @@ class SearchResult extends React.Component {
         });
 
         return (
-            <div>
+            <div className="ul-results-wrapper">
                 <ul className="ul-results">
                     { results }
                 </ul>
