@@ -1,0 +1,56 @@
+.session-form-wrapper {
+    min-width: 1020px;
+}
+
+.session-form-image-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.session-form-image {
+    background-image: url('https://hanslodge.com/img/1724421.jpg');
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    display: flex;
+}
+
+.session-form {
+    display: flex;
+    max-width: 1020px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.session-form form {
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: lightgrey;
+}
+
+.session-form form input {
+    font-size: 15px;
+    width: 50%;
+    margin: 9px 0;
+    padding: 3px;
+}
+
+#form-submit {
+    font-weight: 700;
+    font-size: 15px;
+    padding: 5px;
+    background: blue;
+    color: white;
+    border-radius: 10px;
+}
+
+.session-form-header {
+    text-align: center;
+    font-size: 30px;
+    margin: 12px;
+}

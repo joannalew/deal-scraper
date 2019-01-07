@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import './session.css';
 
 class LoginForm extends React.Component {
 
@@ -60,25 +61,35 @@ class LoginForm extends React.Component {
     render() {
 
         return (
-            <form className='session-login-form' onSubmit={this.handleSubmit}>
-                <input 
-                    required
-                    value={this.state.email}
-                    type="email"
-                    onChange={this.update('email')}
-                    placeholder='Email'
-                />
-                <input
-                    required
-                    value={this.state.password}
-                    type="password"
-                    onChange={this.update('password')}
-                    placeholder="Password"
-                />
-                <button className='demo-user-login' onClick={this.demoLogin}>Demo</button>
-                <input type='submit' value='Login'/>
-                {this.renderErrors()}
-            </form>
+            <div className='session-form-wrapper'>
+                <div className='session-form'>
+                    <form className='session-login-form' onSubmit={this.handleSubmit}>
+                        <label className='session-form-header'>Login</label>
+                        <input 
+                            className='session-form-input'
+                            required
+                            value={this.state.email}
+                            type="email"
+                            onChange={this.update('email')}
+                            placeholder='Email'
+                            />
+                        <input
+                            required
+                            className='session-form-input'
+                            value={this.state.password}
+                            type="password"
+                            onChange={this.update('password')}
+                            placeholder="Password"
+                            />
+                        <input id='form-submit' type='submit' value='Login'/>
+                        <input id='form-submit' onClick={this.demoLogin} type='submit' value='Demo'/>
+                        {this.renderErrors()}
+                    </form>
+                    <div className='session-form-image-wrapper'>
+                        <div className='session-form-image'></div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
