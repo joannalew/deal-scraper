@@ -8,11 +8,9 @@ const SearchResultItem = ( props ) => {
     console.log('props', props);
     return (
         <li className="search-result-item">
-            <div>{ props.idx }</div>
+            <img src={props.item.storeImg} />
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
-            <div>{ props.currentUser.email }</div>
-            <img src={props.item.storeImg} />
             <div>
                 <button onClick={ handleClick(props.item, props.currentUser, props.createNewItem) }>Save Item</button>
             </div>
