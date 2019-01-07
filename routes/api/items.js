@@ -14,7 +14,7 @@ router.post('/create', (req, res) => {
     Item.findOne({ storeId: req.body.item.storeId })
         .then(item => {
             if (item) {
-                return res.status(400).json({ item: "Item already created" });
+                return res.status(400).json({ error: "Item already created" });
             }
             else {
                 const newItem = new Item({
