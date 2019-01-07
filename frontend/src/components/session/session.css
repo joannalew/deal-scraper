@@ -17,7 +17,11 @@
 }
 
 .session-form-image i {
-    font-size: 200px;
+    font-size: 200px;    
+}
+
+a {
+    text-decoration: none;
 }
 
 .session-form {
