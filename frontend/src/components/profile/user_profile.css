@@ -40,7 +40,7 @@
     background-color: rgba(185, 185, 182, 0.3);
 }
 
-.user-profile-watchlist li {
+.user-profile-watchlist a {
     padding-left: 20px;
     padding-top: 20px;
     list-style: none;
