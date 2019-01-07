@@ -35,9 +35,11 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <div className="navbar_header">
-                <i className="fas fa-hand-holding-usd"></i>
-                {this.getLinks()}
+            <div className="navbar_header_wrapper">
+                <div className="navbar_header">
+                    <i className="fas fa-hand-holding-usd"></i>
+                    {this.getLinks()}
+                </div>
             </div>
         );
     }
