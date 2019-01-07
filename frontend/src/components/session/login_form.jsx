@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import './session.css';
 
 class LoginForm extends React.Component {
@@ -87,7 +87,7 @@ class LoginForm extends React.Component {
                     </form>
                     <div className='session-form-image-wrapper'>
                         <div className='session-form-image'>
-                            <i className="fas fa-hand-holding-usd"></i>
+                            <Link to='/'><i className="fas fa-hand-holding-usd"></i></Link>
                         </div>
                     </div>
                 </div>
