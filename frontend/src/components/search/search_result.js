@@ -15,7 +15,7 @@ class SearchResult extends React.Component {
 
         return (
             <div>
-                <ul>
+                <ul className="ul-results">
                     { results }
                 </ul>
             </div>

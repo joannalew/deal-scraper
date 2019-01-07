@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchResultContainer from './search_result_container';
+import './search.css';
 
 class Search extends React.Component {
     constructor(props) {
@@ -22,12 +23,12 @@ class Search extends React.Component {
         return (
             <div>
                 <div>
-                    <form onSubmit={ this.handleSubmit }>
+                    <form className="search-form" onSubmit={ this.handleSubmit }>
                         <div>
                             <label>
-                                <span>Find</span>
+                                <span className="search-text">Find</span>
                                 <span>
-                                    <input type="text" value={this.state.query} onChange={this.update('query')} />
+                                    <input className="search-input-bar" type="text" value={this.state.query} onChange={this.update('query')} />
                                 </span>
                             </label>
                         </div>
