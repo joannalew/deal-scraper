@@ -22,9 +22,14 @@
     padding: 20px;
 }
 
+.watchlist-wrapper {
+    min-width: 1000px
+}
+
 .user-profile-watchlist {
     height: 500px;
-    width: 100%;
+    max-width: 1000px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     overflow: scroll; 
