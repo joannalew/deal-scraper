@@ -1,17 +1,50 @@
 .main_page {
-    height: 500px;
+    height: 600px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    align-content: flex-start;
+    border-bottom: 3px solid goldenrod;
+
 }
 
 .main_title {
     font-size: 50px;
     color: antiquewhite;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+.main_words {
+    margin-top: 50px;
+    height: 500px;
+    width: 30%;
+    display: flex;
+    justify-items: flex-start;
+    flex-direction: column;
 }
 
-.main_block {
+.main_description {
+    font-size: 20px;
+    color: antiquewhite;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.main_image {
+    margin-top: 50px;
+    height: 500px;
+    width: 50%;
+    background-image: url("https://cdn.suwalls.com/wallpapers/beaches/golden-sunset-over-the-waves-43974-2560x1600.jpg");
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.main_block_left {
     display: flex;
     height: 500px;
-    width: 20%;
+    width: 10%;
+}
+
+.main_block_left {
+    display: flex;
+    height: 500px;
+    width: 10%;
 }
