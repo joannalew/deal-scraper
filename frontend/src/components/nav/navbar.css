@@ -27,7 +27,7 @@
 
 .session_links a:hover {
     background: goldenrod;
-    color: whitesmoke;
+    color: antiquewhite;
 }
 
 .session_links a {
@@ -36,13 +36,13 @@
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
-    color: whitesmoke;
+    color: antiquewhite;
     -webkit-text-stroke: 1px black;
 }
 
 .session_links button:hover {
     background: goldenrod;
-    color: whitesmoke;
+    color: antiquewhite;
 }
 
 .session_links button {
@@ -51,8 +51,14 @@
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
-    color: whitesmoke;
+    color: antiquewhite;
     -webkit-text-stroke: 1px black;
+}
+
+.navbar_header_wrapper {
+    min-width: 1020px;
+    background-image: url("https://i.pinimg.com/originals/ea/89/9a/ea899a258fe7f4b4ffaede007a6097ae.jpg");
+    background-size: cover;
 }
 
 .navbar_header {
@@ -60,10 +66,9 @@
     justify-content: space-between;
     align-items: stretch;
     height: 50px;
-    width: 100%;
+    max-width: 1020px;
+    margin: auto;
     border: 1px solid black;
-    background-image: url("https://i.pinimg.com/originals/ea/89/9a/ea899a258fe7f4b4ffaede007a6097ae.jpg");
-    background-size: cover;
 }
 
 .fa-hand-holding-usd {
