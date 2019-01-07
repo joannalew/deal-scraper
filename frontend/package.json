@@ -8,6 +8,7 @@
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.11",
     "npm": "^6.5.0",
+    "promise": "^8.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
