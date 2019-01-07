@@ -12,7 +12,7 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
         username: req.user.username,
         email: req.user.email
     });
-})
+});
 
 router.post('/register', (req, res) => {
     // Check to make sure nobody has already registered with a duplicate email
@@ -42,7 +42,7 @@ router.post('/register', (req, res) => {
                 })
             }
         })
-})
+});
 
 router.post('/login', (req, res) => {
     const email = req.body.email;
@@ -75,6 +75,6 @@ router.post('/login', (req, res) => {
                     }
                 })
         })
-})
+});
 
 module.exports = router;

@@ -11,19 +11,20 @@ router.get('/', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-    Item.findOne({ storeId: req.body.storeId })
+    Item.findOne({ storeId: req.body.item.storeId })
         .then(item => {
             if (item) {
-                return res.status(400).json({ itemId: "Item already created" });
+                return res.status(400).json({ item: "Item already created" });
             }
             else {
                 const newItem = new Item({
-                    store: req.body.store,
-                    storeId: req.body.storeId,
-                    storeUrl: req.body.storeUrl,
-                    storeImg: req.body.storeImg,
-                    title: req.body.title,
-                    price: req.body.price
+                    store: req.body.item.store,
+                    storeId: req.body.item.storeId,
+                    storeUrl: req.body.item.storeUrl,
+                    storeImg: req.body.item.storeImg,
+                    title: req.body.item.title,
+                    price: req.body.item.price,
+                    followers: [req.body.user.id]
                 });
                 newItem.save()
                        .then(item => res.json(item))
@@ -48,5 +49,11 @@ router.get('/store/:store_name', (req, res) => {
         )
     );
 });
+
+router.get('/following/:id', (req, res) => {
+    Item.find({ followers: req.params.id })
+        .then(items => res.json(items))
+        .catch(err => console.log(err))
+})
 
 module.exports = router;
