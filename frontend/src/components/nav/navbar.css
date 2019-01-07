@@ -1,0 +1,31 @@
+.session_links{
+    display: flex;
+    justify-content: flex-end;
+    align-content: space-between;
+    align-items: stretch;
+    height: 20px;
+    margin-top: 8px;
+    margin-right: 5px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.session_links a {
+    margin: 0 5px;
+    padding: 3px;
+    background: lightblue;
+}
+
+.navbar_logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+.navbar_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 40px;
+    width: 100%;
+    border: 1px solid black;
+}

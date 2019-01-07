@@ -1,0 +1,20 @@
+.user-profile-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.user-profile-details {
+    padding-left: 40px;
+}
+
+.user-profile-details div {
+    padding: 8px 0;
+    font-size: 32px;
+}
+
+.user-profile-info {
+    display: flex;
+    padding: 20px;
+}

@@ -8,6 +8,7 @@ import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import SearchContainer from './search/search_container';
+import UserProfileContainer from './profile/user_profile_container';
 
 const App = () => (
     <div>
@@ -16,6 +17,7 @@ const App = () => (
             <AuthRoute exact path="/" component={MainPage} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <ProtectedRoute exact path="/profile" component={UserProfileContainer} />
             <Route exact path='/item/:id' component={ItemShowContainer} />
 
             <Route exact path="/search" component={SearchContainer} />
