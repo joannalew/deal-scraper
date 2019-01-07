@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 import UserProfile from './user_profile';
+import { getFollows } from '../../actions/item_actions';
 
-const mapStateToProps = ({ session }) => {
-    let user = session.user;
+const mapStateToProps = state => {
     return ({
-        user
+        user: state.session.user,
+        items: state.entities.items
     });
 };
 
 const mapDispatchToProps = dispatch => {
-
     return ({
-
+        getFollows: id => dispatch(getFollows(id))
     });
 };
 
