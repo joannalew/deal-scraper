@@ -18,6 +18,7 @@ const getButton = function(item, user, addFunc, removeFunc) {
 };
 
 const UserProfileItem = ( props ) => {
+    console.log(props);
     return (
         <li>
             <img src={ props.item.storeImg } />
