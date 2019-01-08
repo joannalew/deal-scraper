@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const addFollowClick = function(item, user, addFunc) {
     return () => { addFunc({item: item, user: user}) }
@@ -21,9 +22,11 @@ const UserProfileItem = ( props ) => {
     console.log(props);
     return (
         <li>
+        <Link to={`/item/${props.item._id}`}>
             <img src={ props.item.storeImg } />
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
+        </Link>
             <div>
                 { getButton(props.item, props.currentUser, props.addFollower, props.removeFollower) }
             </div>

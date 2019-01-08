@@ -16,11 +16,10 @@ const getButton = function(item, user, createFunc) {
 
 const SearchResultItem = ( props ) => {
     return (
-        <li>
-            <div>{ props.idx }</div>
+        <li className="search-result-item">
+            <img src={props.item.storeImg} />
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
-            <img src={ props.item.storeImg } />
             <div>
                 { getButton(props.item, props.currentUser, props.createNewItem) }
             </div>

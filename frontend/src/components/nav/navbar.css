@@ -58,7 +58,8 @@
 .navbar_header_wrapper {
     position: relative;
     min-width: 1020px;
-    border-bottom: 3px solid goldenrod;
+    border-bottom: 3px solid rgba(250, 235, 215, 0.8);
+
 }
 
 .navbar_header {
