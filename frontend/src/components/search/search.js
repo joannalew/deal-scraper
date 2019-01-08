@@ -24,15 +24,12 @@ class Search extends React.Component {
             <div>
                 <div>
                     <form className="search-form" onSubmit={ this.handleSubmit }>
-                        <div>
-                            <label>
-                                <span className="search-text">Find</span>
-                                <span>
-                                    <input className="search-input-bar" type="text" value={this.state.query} onChange={this.update('query')} />
-                                </span>
-                            </label>
-                        </div>
-
+                        <span className="search-text">Find Your Deal Now!</span>
+                        <label>
+                            <span>
+                                <input className="search-input-bar" type="text" value={this.state.query} onChange={this.update('query')} />
+                            </span>
+                        </label>
                         <div>
                             <button type="submit">Submit</button>
                         </div>

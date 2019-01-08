@@ -10,8 +10,7 @@
 
 .main_title {
     font-size: 50px;
-    color: antiquewhite;
-    font-family: "Arial Black", Gadget, sans-serif;
+
 }
 .main_words {
     margin-top: 50px;
@@ -20,6 +19,8 @@
     display: flex;
     justify-items: flex-start;
     flex-direction: column;
+    color: antiquewhite;
+    font-family: "Arial Black", Gadget, sans-serif;
 }
 
 .main_description {
