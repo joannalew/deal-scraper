@@ -140,9 +140,22 @@ router.get('/cheerio/test', function (req, res) {
         var $ = cheerio.load(data);
         var children = {};
 
+
+
         $('#s-results-list-atf').filter(function () {
             var data = $(this);
-            children.title = data.children().first().attr('id');
+            var firstChild = data.children().first();
+            children[0] = firstChild.attr('id');
+
+            var currChild = firstChild;
+            for (let i = 1; i < 5; i++) {
+                currChild = currChild.next();
+
+                children[i] = {
+                    id: currChild.attr('id')
+                }
+            }
+            
         })
 
         res.send(children);
