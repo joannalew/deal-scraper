@@ -24,9 +24,23 @@
 }
 
 .main_description {
-    font-size: 20px;
+    font-size: 22px;
     color: antiquewhite;
     font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.main-page-list {
+    list-style: none;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.main-page-list li {
+    margin-bottom: 20px;
+}
+
+.main-page-list li:before {
+    content: '- ';
 }
 
 .main_image {
