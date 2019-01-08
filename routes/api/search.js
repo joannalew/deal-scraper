@@ -5,6 +5,7 @@ const cheerio = require('cheerio');
 const router = express.Router();
 
 const ebayKey = require('../../config/keys').ebayAPIKey;
+const etsyKey = require('../../config/keys').etsyAPIKey;
 
 router.get('/', (req, res) => res.json({ msg: "This is the search route" }));
 router.get("/test", (req, res) => res.json({ msg: "This is the search test route" }));
@@ -28,6 +29,56 @@ const getImageFromEbay = async function(itemObj, res) {
     res.send({ items: await Promise.all(promiseArray) });
 };
 
+const getImageFromEtsy = async function(itemObj, res) {
+    var promiseArr = [];
+
+    for (let key in itemObj) {
+        let url = itemObj[key].storeUrl;
+        promiseArr.push(new Promise((resolve, reject) => 
+            request(url, function (error, response, html) {
+                if (error) { reject(error); }
+                var $ = cheerio.load(html);
+                var src = $('#image-0').children().first().attr('src');
+                itemObj[key].storeImg = src;
+                resolve(itemObj[key]);
+            })
+        ))
+    }
+
+    res.send({ items: await Promise.all(promiseArr) });
+}
+
+router.get('/etsy/:keywords', function(req, res) {
+    var urlEtsy = 'https://openapi.etsy.com/v2/listings/active';
+    urlEtsy += `?keywords=${req.params.keywords}`;
+    urlEtsy += `&api_key=${etsyKey}`;
+
+    request(urlEtsy, function(error, response) {
+        if (!error) {
+            let resStr = JSON.stringify(response);
+            let resObj = JSON.parse(resStr);
+            let resBody = resObj.body;
+            let resReal = JSON.parse(resBody)
+            
+            let items = resReal.results;
+            let count = 25;
+            let itemInfo = {};
+
+            for (let i = 0; i < count; i++) {
+                itemInfo[i] = {
+                    store: 'etsy',
+                    storeId: items[i].listing_id, 
+                    storeUrl: items[i].url.slice(0, -52),
+                    title: items[i].title,
+                    price: items[i].price
+                };
+            }
+
+            getImageFromEtsy(itemInfo, res);
+        }
+    })
+});
+
 router.get('/ebay/:keywords', function(req, res) {
     let callback = '_cb_findItemsByKeywords';
     let keywords = req.params.keywords;
@@ -42,7 +93,7 @@ router.get('/ebay/:keywords', function(req, res) {
     url += "&REST-PAYLOAD";
     url += `&keywords=${keywords}`;
 
-    request(url, function (error, response) {
+    request(url, function(error, response) {
         if (!error) {
             let resStr = JSON.stringify(response);
             let resObj = JSON.parse(resStr);
