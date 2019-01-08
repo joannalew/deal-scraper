@@ -1,5 +1,6 @@
 import React from 'react';
 import './item_show.css';
+import PriceGraph from '../graph/price_graph';
 
 class ItemShow extends React.Component {
     componentDidMount() {
@@ -47,6 +48,9 @@ class ItemShow extends React.Component {
                             <div className='item-price'>{this.props.item.price}</div>
                         </div>
                         { this.getButton() }
+                    </div>
+                    <div>
+                        <PriceGraph />
                     </div>
                 </div>
             )
