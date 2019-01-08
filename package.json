@@ -19,6 +19,8 @@
     "cheerio": "^1.0.0-rc.2",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "frappe": "0.0.1",
+    "frappe-charts": "^1.1.0",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.1",
     "passport": "^0.4.0",
