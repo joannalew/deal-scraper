@@ -88,8 +88,9 @@ router.get('/:id', function (req, res) {
     })
 });
 
-router.get('/cheerio/test', function (req, res) {
-    var url = `https://www.amazon.com/s/field-keywords=sweaters`;
+router.get('/amazon/:keywords', function (req, res) {
+    let keywords = req.params.keywords
+    var url = `https://www.amazon.com/s/field-keywords=${keywords}`;
 
     function getGzipped(url, callback) {
         // buffer to store the streamed decompression
@@ -126,8 +127,10 @@ router.get('/cheerio/test', function (req, res) {
             children[0] = firstChild.attr('id');
 
             var currChild = firstChild;
-            for (let i = 1; i < 6; i++) {
+            for (let i = 1; i < 10; i++) {
                 currChild = currChild.next();
+
+                if (currChild.find('a').length === 0) { continue; }
 
                 let header = currChild.find('h2').first();
                 let title = header.text();
@@ -135,7 +138,7 @@ router.get('/cheerio/test', function (req, res) {
                     title = title.substring(11);
                 }
 
-                let link = header.parent().attr('href');
+                let link = currChild.find('a').first().attr('href');
                 let start = link.indexOf('https');
                 link = link.substring(start);
                 let end = link.indexOf('ref');
