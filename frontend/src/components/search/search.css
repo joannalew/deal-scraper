@@ -6,7 +6,7 @@
     -webkit-text-stroke: 1px black;
     color: antiquewhite;
     font-size: 30px;
-    background-color: silver;
+    background-color: rgba(255, 255, 255, 0.3)
 }
 
 .search-form {
