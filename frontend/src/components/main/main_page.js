@@ -24,6 +24,9 @@ class MainPage extends React.Component {
                 <div className="main_page_items">
                     <div className="main_items_block_left"></div>
                     <h2 className="main_page_items_title">Recently Viewed Items</h2>
+                    <div className='recently-viewed-items'>
+                        
+                    </div>
                 </div>
                 <footer>
                     
