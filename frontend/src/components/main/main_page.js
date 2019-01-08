@@ -11,6 +11,10 @@ class MainPage extends React.Component {
                     <div className="main_words">
                         <h1 className="main_title">Deal Cliq</h1>
                         <h2 className="main_description">The Best Deals at the Tip of Your Fingers</h2>
+                        <h5>Search through a variety of items</h5>
+                        <h5>Find the deals you want fast</h5>
+                        <h5>Enjoy our eye opening deals</h5>
+                        <h5>If you're not satisfied, we're not satisfied</h5>
                     </div>
                     <div className="main_image"></div>
                     <div className="main_block_right"></div>
