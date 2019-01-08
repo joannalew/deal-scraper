@@ -26,6 +26,11 @@ const ItemSchema = new Schema({
         type: String,
         required: true
     },
+    priceHistory: {
+        type: Array,
+        required: true,
+        default: []
+    },
     followers: {
         type: Array,
         required: true,

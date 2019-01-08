@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNewItem } from '../../actions/item_actions';
+import { createNewItem, addFollower, removeFollower } from '../../actions/item_actions';
 import SearchResultItem from './search_result_item';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -9,7 +9,9 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    createNewItem: data => dispatch(createNewItem(data))
+    createNewItem: data => dispatch(createNewItem(data)),
+    addFollower: data => dispatch(addFollower(data)),
+    removeFollower: data => dispatch(removeFollower(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResultItem);

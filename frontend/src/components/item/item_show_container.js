@@ -6,6 +6,7 @@ const mapStateToProps = (state, ownProps) => {
 
     let id = ownProps.match.params.id;
     return ({
+        itemId: id,
         item: state.entities.items[id],
         user: state.session.user
     });

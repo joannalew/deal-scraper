@@ -1,19 +1,16 @@
 import React from 'react';
 
 class ItemShow extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {item: this.props.item};
-    }
-
     componentDidMount() {
         let id = this.props.match.params.id;
         this.props.getItem(id);
     }
 
-    componentDidUpdate(preProps) {
-        if (preProps.item !== this.props.item) {
-            this.setState({item: this.props.item})
+    componentDidUpdate(prevProps) {
+        if (!prevProps.item) { return; }
+
+        if (prevProps.itemId !== this.props.itemId) {
+            this.props.getItem(this.props.match.params.id);
         }
     }
 
@@ -35,8 +32,6 @@ class ItemShow extends React.Component {
     }
 
     render() {
-        console.log('state', this.state);
-        console.log('props', this.props);
         if (this.props.item) {
             return (
                 <div className='item-show-page'>
