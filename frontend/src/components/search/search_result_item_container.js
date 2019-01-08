@@ -5,7 +5,8 @@ import SearchResultItem from './search_result_item';
 const mapStateToProps = (state, ownProps) => ({
     item: ownProps.item,
     idx: ownProps.idx,
-    currentUser: state.session.user
+    currentUser: state.session.user,
+    history: ownProps.history
 });
 
 const mapDispatchToProps = dispatch => ({
