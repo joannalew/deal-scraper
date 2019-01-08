@@ -17,7 +17,9 @@ const getButton = function(item, user, createFunc) {
 const SearchResultItem = ( props ) => {
     return (
         <li className="search-result-item">
-            <img src={props.item.storeImg} />
+            <div className='image-container'>
+                <img src={props.item.storeImg} />
+            </div>
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
             <div>
