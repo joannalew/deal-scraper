@@ -88,28 +88,6 @@ router.get('/:id', function (req, res) {
     })
 });
 
-router.get('/amazon/:keywords', function (req, res) {
-    let keywords = req.params.keywords;
-    var urlAmazon = `https://www.amazon.com/s/field-keywords=${keywords}`;
-
-    request(urlAmazon, function (error, response, html) {
-        if (!error) {
-
-            var $ = cheerio.load(html);
-            var itemObj = { 1: {}, 2: {}, 3: {}, 4: {}, 5: {} };
-            var children = {};
-
-            $('#s-results-list-atf').filter(function () {
-                var data = $(this);
-                children.title = data.children().first().attr('id');
-            })
-
-        }
-        console.log($('#atfResults').attr('id'));
-        res.send($('#atfResults').attr('id'));
-    })
-});
-
 router.get('/cheerio/test', function (req, res) {
     var url = `https://www.amazon.com/s/field-keywords=sweaters`;
 
@@ -148,17 +126,46 @@ router.get('/cheerio/test', function (req, res) {
             children[0] = firstChild.attr('id');
 
             var currChild = firstChild;
-            for (let i = 1; i < 5; i++) {
+            for (let i = 1; i < 6; i++) {
                 currChild = currChild.next();
 
+                let header = currChild.find('h2').first();
+                let title = header.text();
+                if (title.substring(0, 11) === '[Sponsored]') {
+                    title = title.substring(11);
+                }
+
+                let link = header.parent().attr('href');
+                let start = link.indexOf('https');
+                link = link.substring(start);
+                let end = link.indexOf('ref');
+                link = link.substring(0, end);
+                link = link.replace(/%2F/g, '/');
+                link = link.replace(/%3A/g, ':');
+
+                let idStart = link.indexOf('dp/');
+                let id = link.substring(idStart + 3, link.length - 1);
+
+                let price = currChild.find('.a-offscreen').text();
+                let priceBegin = price.indexOf('$');
+                let priceEnd = price.indexOf('.') + 3;
+                price = price.substring(priceBegin, priceEnd);
+
                 children[i] = {
-                    id: currChild.attr('id')
+                    store: 'amazon',
+                    storeId: id,
+                    storeUrl: link,
+                    storeImg: currChild.find('img').first().attr('src'),
+                    title: title,
+                    price: price
                 }
             }
             
         })
 
-        res.send(children);
+        delete children[0];
+        let itemObj = {items: Object.values(children)}
+        res.send(itemObj);
     });
 })
 
