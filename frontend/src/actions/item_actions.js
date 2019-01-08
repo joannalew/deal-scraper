@@ -11,6 +11,13 @@ export const getItem = id => dispatch => {
                   .catch(err => console.log(err));
 };
 
+export const recentlyViewed = () => dispatch => {
+
+    return APIUtil.recentlyViewed()
+        .then((res) => dispatch(receiveItems(res)))
+        .catch(err => console.log(err));
+}
+
 export const createNewItem = data => dispatch => (
     APIUtil.createItem(data)
            .then(item => dispatch(receiveNewItem(item)))

@@ -4,6 +4,11 @@ export const getItem = id => {
     return axios.get(`/api/items/${id}`);
 };
 
+export const recentlyViewed = () => {
+
+    return axios.get('/api/items');
+}
+
 export const createItem = data => {
     return axios.post('/api/items/create', data);
 };
