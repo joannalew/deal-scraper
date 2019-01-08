@@ -1,5 +1,6 @@
 import React from 'react';
 import './main_page.css';
+import RecentlyViewedItemsContainer from '../recently_viewed/recently_viewed_container';
 
 class MainPage extends React.Component {
 
@@ -25,7 +26,7 @@ class MainPage extends React.Component {
                     <div className="main_items_block_left"></div>
                     <h2 className="main_page_items_title">Recently Viewed Items</h2>
                     <div className='recently-viewed-items'>
-                        
+                        <RecentlyViewedItemsContainer />
                     </div>
                 </div>
                 <footer>
