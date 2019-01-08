@@ -7,19 +7,26 @@ const router = express.Router();
 const ebayKey = require('../../config/keys').ebayAPIKey;
 const etsyKey = require('../../config/keys').etsyAPIKey;
 
-router.get('/', (req, res) => res.json({ msg: "This is the search route" }));
-router.get("/test", (req, res) => res.json({ msg: "This is the search test route" }));
-
 const getImageFromEbay = async function(itemObj, res) {
     var promiseArray = [];
 
     for (let key in itemObj) {
-        let url = itemObj[key].storeUrl;
+        let url = "http://open.api.ebay.com/shopping";
+        url += "?callname=GetSingleItem";
+        url += "&responseencoding=JSON";
+        url += `&appid=${ebayKey}`;
+        url += "&siteid=0";
+        url += "&version=967";
+        url += `&ItemID=${itemObj[key].storeId}`;
+
         promiseArray.push(new Promise((resolve, reject) => 
             request(url, function (error, response, html) {
                 if (error) { reject(error); }
-                var $ = cheerio.load(html);
-                var src = $('#icImg').attr('src');
+                let resStr = JSON.stringify(response);
+                let resObj = JSON.parse(resStr);
+                let resBody = resObj.body;
+                let resReal = JSON.parse(resBody);
+                let src = resReal.Item.PictureURL[0];
                 itemObj[key].storeImg = src;
                 resolve(itemObj[key]);
             })
@@ -55,6 +62,29 @@ const getImageFromEtsy = async function(itemObj, res) {
 
     res.send({ items: await Promise.all(promiseArr) });
 }
+
+router.get('/:id', function(req, res) {
+    let id = req.params.id;
+
+    let url = "http://open.api.ebay.com/shopping";
+    url += "?callname=GetSingleItem";
+    url += "&responseencoding=JSON";
+    url += `&appid=${ebayKey}`;
+    url += "&siteid=0";
+    url += "&version=967";
+    url += `&ItemID=${id}`;
+
+    request(url, function (error, response, html) {
+        if (!error) {
+            let resStr = JSON.stringify(response);
+            let resObj = JSON.parse(resStr);
+            let resBody = resObj.body;
+            let resReal = JSON.parse(resBody);
+            let src = resReal.Item.PictureURL[0];
+            res.send(src);
+        }
+    })
+});
 
 router.get('/etsy/:keywords', function(req, res) {
     var urlEtsy = 'https://openapi.etsy.com/v2/listings/active';
