@@ -88,6 +88,7 @@ class SignupForm extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className='filler'></div>
             </div>
         )
     }

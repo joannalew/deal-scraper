@@ -5,7 +5,7 @@ const ItemsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type) {
         case RECEIVE_NEW_ITEM:
-            return action.item;
+            return merge({}, state, {[action.item._id]: action.item});
         case RECEIVE_ITEM:
             let newState = merge({}, state);
             delete newState[action.item._id];
