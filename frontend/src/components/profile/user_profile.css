@@ -20,9 +20,10 @@
 .user-profile-info {
     display: flex;
     padding: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
-
-.watchlist-wrapper {
+.user-profile {
     min-width: 1000px
 }
 
@@ -39,7 +40,7 @@
     background-color: rgba(185, 185, 182, 0.3);
 }
 
-.user-profile-watchlist li {
+.user-profile-watchlist a {
     padding-left: 20px;
     padding-top: 20px;
     list-style: none;
