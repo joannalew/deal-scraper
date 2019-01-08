@@ -11,10 +11,12 @@ class MainPage extends React.Component {
                     <div className="main_words">
                         <h1 className="main_title">Deal Cliq</h1>
                         <h2 className="main_description">The Best Deals at the Tip of Your Fingers</h2>
-                        <h5>Search through a variety of items</h5>
-                        <h5>Find the deals you want fast</h5>
-                        <h5>Enjoy our eye opening deals</h5>
-                        <h5>If you're not satisfied, we're not satisfied</h5>
+                        <ul className='main-page-list'>
+                            <li>Search through a variety of items</li>
+                            <li>Find the deals you want fast</li>
+                            <li>Enjoy our eye opening deals</li>
+                            <li>If you're not satisfied, we're not satisfied</li>
+                        </ul>
                     </div>
                     <div className="main_image"></div>
                     <div className="main_block_right"></div>
