@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import RecentlyViewedItems from './recently_viewed';
-import { recentlyViewed} from '../../util/item_util';
+import { recentlyViewed} from '../../actions/item_actions';
 
 const mapStateToProps = state => {
 
