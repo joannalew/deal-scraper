@@ -23,6 +23,7 @@ class Search extends React.Component {
         return (
             <div>
                 <div>
+                    <marquee className="search-options">Yeezy, iPhone, SmartWater, Supreme, Mug, Coffee, Jordan, Nike, Charger, Molton Brown</marquee>
                     <form className="search-form" onSubmit={ this.handleSubmit }>
                         <span className="search-text">Find Your Deal Now!</span>
                         <label>
