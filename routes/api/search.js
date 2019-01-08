@@ -33,12 +33,20 @@ const getImageFromEtsy = async function(itemObj, res) {
     var promiseArr = [];
 
     for (let key in itemObj) {
-        let url = itemObj[key].storeUrl;
+        let url = 'https://openapi.etsy.com/v2/listings/';
+        url += `${itemObj[key].storeId}/images`;
+        url += `?api_key=${etsyKey}`;
+
+        await new Promise((res) => setTimeout(res, 100));
+
         promiseArr.push(new Promise((resolve, reject) => 
             request(url, function (error, response, html) {
                 if (error) { reject(error); }
-                var $ = cheerio.load(html);
-                var src = $('#image-0').children().first().attr('src');
+                let resStr = JSON.stringify(response);
+                let resObj = JSON.parse(resStr);
+                let resBody = resObj.body;
+                let resReal = JSON.parse(resBody);
+                let src = resReal.results[0]['url_570xN'];
                 itemObj[key].storeImg = src;
                 resolve(itemObj[key]);
             })
