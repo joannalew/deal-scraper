@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchResultItemContainer from './search_result_item_container';
+import {withRouter} from 'react-router-dom'
 
 class SearchResult extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class SearchResult extends React.Component {
     render() {
         let results = this.props.items.map((item, idx) => {
             return (
-                <SearchResultItemContainer key={item.storeId} item={item} idx={idx + 1} />
+                <SearchResultItemContainer key={item.storeId} item={item} idx={idx + 1} history={this.props.history} />
             )
         });
 
@@ -23,4 +24,4 @@ class SearchResult extends React.Component {
     }
 };
 
-export default SearchResult;
+export default withRouter(SearchResult);
