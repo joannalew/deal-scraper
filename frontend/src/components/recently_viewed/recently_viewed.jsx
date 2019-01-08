@@ -13,7 +13,9 @@ class RecentlyViewedItems extends React.Component {
             
             return (
                 <Link key={idx} to={`item/${item._id}`}>
-                    <img src={item.storeImg} alt=""/>
+                    <div className='image'>
+                        <img src={item.storeImg} alt=""/>
+                    </div>
                     <div>{item.title}</div>
                     <div>{item.price}</div>
                 </Link>
