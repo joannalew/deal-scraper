@@ -8,7 +8,7 @@ const handleClick = function(item, user, createFunc, props) {
 };
 
 const getButton = function(item, user, createFunc, props) {
-    if (Object.keys(user).length === 0) {
+    if (!user || Object.keys(user).length === 0) {
         return (<div></div>);
     }
     else {
