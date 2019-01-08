@@ -1,4 +1,5 @@
 import React from 'react';
+import './item_show.css';
 
 class ItemShow extends React.Component {
     constructor(props) {
@@ -39,12 +40,19 @@ class ItemShow extends React.Component {
         console.log('props', this.props);
         if (this.props.item) {
             return (
-                <div className='item-show-page'>
-                    <h1 className='item-show-title'>{this.props.item.title}</h1>
-                    <img src={this.props.item.storeImg} alt=""/>
-                    <a className='store-link' href={this.props.item.storeUrl}>{this.props.item.store}</a>
-                    <div className='item-price'>{this.props.item.price}</div>
-                    { this.getButton() }
+                <div className='item-show-wrapper'>
+                    <div className='item-show-page'>
+                        <h1 className='item-show-title'>{this.props.item.title}</h1>
+                        <div className='image-graph'>
+                            <div className='item-image-wrapper'><img className='item-image' src={this.props.item.storeImg} alt=""/></div>
+                            <div className='price-graph'></div>
+                        </div>
+                        <div className='price-info'>
+                            <a className='store-link' href={this.props.item.storeUrl}>{this.props.item.store}:</a>
+                            <div className='item-price'>{this.props.item.price}</div>
+                        </div>
+                        { this.getButton() }
+                    </div>
                 </div>
             )
         } else {
