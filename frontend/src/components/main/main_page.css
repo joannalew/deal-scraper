@@ -16,7 +16,7 @@
 }
 
 .line {
-    border-bottom: 3px solid antiquewhite;
+    border-bottom: 3px solid rgba(250, 235, 215, 0.3);
 }
 
 .main_title {
@@ -118,7 +118,7 @@
 .recently-viewed-items a {
     width: 21%;
     margin: 16px;
-    color: antiquewhite;
+    color:  rgba(255, 255, 255, 0.7);
     font-family: "Arial Black", Gadget, sans-serif;
     font-size: 15px;
     /* background-color: white; */
