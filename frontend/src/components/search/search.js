@@ -5,7 +5,10 @@ import './search.css';
 class Search extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { query: '' };
+        this.state = { 
+            query: '',
+            store: 'ebay'
+         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -31,6 +34,20 @@ class Search extends React.Component {
                                 <input className="search-input-bar" type="text" value={this.state.query} onChange={this.update('query')} />
                             </span>
                         </label>
+                        <div className='radio-buttons' >
+                            <div>
+                                <input type='radio' name='store' value='ebay' onChange={this.update('store')}/>
+                                <span>Ebay</span>
+                            </div>
+                            <div>
+                                <input type='radio' name='store' value='etsy' onChange={this.update('store')}/>
+                                <span>Etsy</span>
+                            </div>
+                            <div>
+                                <input type='radio' name='store' value='amazon' onChange={this.update('store')}/>
+                                <span>Amazon</span>
+                            </div>
+                        </div>
                         <div>
                             <button type="submit">Submit</button>
                         </div>
