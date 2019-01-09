@@ -23,11 +23,11 @@ class PriceGraph extends Component {
 
     render() {
         return (
-            <div className='Graph'>
-                <PriceChart
-                    title='Price History (30 days)'
+            <div className='graph'>
+                <PriceChart className="chart"
+                    // title='Price History (30 days)'
                     type='line'
-                    height={250}
+                    height={400}
                     data={{
                         labels: [
                             1, 5, 10, 15, 20, 25, 30

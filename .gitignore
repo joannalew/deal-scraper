@@ -1,5 +1,5 @@
 /node_modules
-/config/keys.js
+/config/keys_dev.js
 
 # react stuff
 # dependencies

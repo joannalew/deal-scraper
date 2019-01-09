@@ -185,10 +185,9 @@ router.get('/etsy/:keywords', function (req, res) {
             let resReal = JSON.parse(resBody)
 
             let items = resReal.results;
-            let count = 25;
             let itemInfo = {};
 
-            for (let i = 0; i < count; i++) {
+            for (let i = 0; i < items.length; i++) {
                 itemInfo[i] = {
                     store: 'etsy',
                     storeId: items[i].listing_id,
