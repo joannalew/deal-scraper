@@ -39,18 +39,22 @@ class ItemShow extends React.Component {
                 <div className='item-show-wrapper'>
                     <div className='item-show-page'>
                         <h1 className='item-show-title'>{this.props.item.title}</h1>
-                        <div className='image-graph'>
-                            <div className='item-image-wrapper'><img className='item-image' src={this.props.item.storeImg} alt=""/></div>
-                            <div className='price-graph'></div>
+                        <div className="item-info-and-graph">
+                            <div className='item-image-wrapper'>
+                                <div className="show"><img className='item-image' src={this.props.item.storeImg} alt=""/></div>
+                                <div className='price-info'>
+                                    <a className='store-link' href={this.props.item.storeUrl}>{this.props.item.store}:</a>
+                                    <div className='item-price'>{this.props.item.price}</div>
+                                </div>
+                                { this.getButton() }
+                            </div>
+                            <div className="item-price-graph">
+                                <div className="graph-title">Price Graph (30 Days)</div>
+                                <div className="price-graph">
+                                    <PriceGraph />
+                                </div>
+                            </div>
                         </div>
-                        <div className='price-info'>
-                            <a className='store-link' href={this.props.item.storeUrl}>{this.props.item.store}:</a>
-                            <div className='item-price'>{this.props.item.price}</div>
-                        </div>
-                        { this.getButton() }
-                    </div>
-                    <div>
-                        <PriceGraph />
                     </div>
                 </div>
             )
