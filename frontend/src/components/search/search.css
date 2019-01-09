@@ -12,7 +12,7 @@
 .search-form {
     display: flex;
     flex-direction: row;
-    max-width: 1020px;
+    min-width: 1000px;
     margin: auto;
     margin-top: 50px;
     padding: 20px;
@@ -22,6 +22,14 @@
     background-color: lightgrey;
     justify-content: space-around;
     border-radius: 3px;
+}
+
+.radio-buttons {
+    display: flex;
+}
+
+.radio-buttons span {
+    margin-right: 10px;
 }
 
 .search-text {
