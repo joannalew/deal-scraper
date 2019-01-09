@@ -51,7 +51,7 @@ class ItemShow extends React.Component {
                             <div className="item-price-graph">
                                 <div className="graph-title">Price Graph (30 Days)</div>
                                 <div className="price-graph">
-                                    <PriceGraph />
+                                    <PriceGraph priceHistory={this.props.item.priceHistory}/>
                                 </div>
                             </div>
                         </div>

@@ -7,8 +7,7 @@ class PriceGraph extends Component {
         datasets: [
             {
                 color: 'light-blue',
-                values: [40, 30, 40, 35, 37, 35, 40]
-                // this.props.item.priceHistory
+                values: this.props.priceHistory
             }
         ]
     };
