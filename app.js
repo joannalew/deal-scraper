@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const path = require('path');
 
 const app = express();
 const db = require('./config/keys').mongoURI;
@@ -26,7 +27,12 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.use("/api/users", users);
-// app.use("/api/users/register", users);
-// app.use("/api/users/login", users);
 app.use('/api/items', items);
 app.use('/api/search', search);
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'));
+    app.get('/', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    })
+  }
