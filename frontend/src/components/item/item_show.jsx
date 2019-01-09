@@ -41,7 +41,7 @@ class ItemShow extends React.Component {
                         <h1 className='item-show-title'>{this.props.item.title}</h1>
                         <div className="item-info-and-graph">
                             <div className='item-image-wrapper'>
-                                <div><img className='item-image' src={this.props.item.storeImg} alt=""/></div>
+                                <div className="show"><img className='item-image' src={this.props.item.storeImg} alt=""/></div>
                                 <div className='price-info'>
                                     <a className='store-link' href={this.props.item.storeUrl}>{this.props.item.store}:</a>
                                     <div className='item-price'>{this.props.item.price}</div>
@@ -49,7 +49,10 @@ class ItemShow extends React.Component {
                                 { this.getButton() }
                             </div>
                             <div className="item-price-graph">
-                                <PriceGraph />
+                                <div className="graph-title">Price Graph (30 Days)</div>
+                                <div className="price-graph">
+                                    <PriceGraph />
+                                </div>
                             </div>
                         </div>
                     </div>
