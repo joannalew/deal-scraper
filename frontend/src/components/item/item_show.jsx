@@ -49,8 +49,11 @@ class ItemShow extends React.Component {
                         </div>
                         { this.getButton() }
                     </div>
-                    <div>
-                        <PriceGraph priceHistory={this.props.item.priceHistory}/>
+                    <div>                  
+                        <PriceGraph 
+                            priceHistory={this.props.item.priceHistory}
+                            itemPrice={this.props.item.price}
+                        />
                     </div>
                 </div>
             )
