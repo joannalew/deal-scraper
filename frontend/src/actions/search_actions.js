@@ -7,8 +7,8 @@ export const receiveResults = items => ({
     items
 });
 
-export const fetchResults = query => dispatch => (
-    getSearchResults(query)
+export const fetchResults = data => dispatch => (
+    getSearchResults(data)
         .then(items => dispatch(receiveResults(items)))
         .catch(err => console.log(err))
 );
