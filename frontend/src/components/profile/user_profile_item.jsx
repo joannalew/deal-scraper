@@ -19,7 +19,6 @@ const getButton = function(item, user, addFunc, removeFunc) {
 };
 
 const UserProfileItem = ( props ) => {
-    console.log(props);
     return (
         <li>
         <Link to={`/item/${props.item._id}`}>
