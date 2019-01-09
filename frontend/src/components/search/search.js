@@ -19,7 +19,6 @@ class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.fetchResults(this.state)
-            .then(() => console.log("success"));
     }
 
     render() {
