@@ -9,13 +9,13 @@ class PriceGraph extends Component {
             {
                 color: 'light-blue',
                 values: [
-                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
-                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
-                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
-                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
-                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
-                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
-                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100
+                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100),
+                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100),
+                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100),
+                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100),
+                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100),
+                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100),
+                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)
                 ]
             }
         ]
