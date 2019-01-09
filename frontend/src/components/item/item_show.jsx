@@ -50,7 +50,7 @@ class ItemShow extends React.Component {
                         { this.getButton() }
                     </div>
                     <div>
-                        <PriceGraph />
+                        <PriceGraph priceHistory={this.props.item.priceHistory}/>
                     </div>
                 </div>
             )
