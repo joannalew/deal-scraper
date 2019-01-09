@@ -47,3 +47,13 @@
 .price-info {
     display: flex;
 }
+
+.item-info-and-graph {
+    display: flex;
+}
+
+.item-price-graph {
+    width: 50%;
+    height: 50%;
+    overflow: scroll;
+}
