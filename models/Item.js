@@ -29,7 +29,7 @@ const ItemSchema = new Schema({
     priceHistory: {
         type: Array,
         required: true,
-        default: [40, 30, 40, 35, 37, 35, 40]
+        default: []
     },
     followers: {
         type: Array,

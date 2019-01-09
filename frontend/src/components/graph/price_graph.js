@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 import PriceChart from './price_chart';
 
-class PriceGraph extends Component {
+
+class PriceGraph extends Component { 
 
     state = {
         datasets: [
             {
                 color: 'light-blue',
-                values: this.props.priceHistory
+                values: [
+                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
+                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
+                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
+                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
+                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
+                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100,
+                    (Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100
+                ]
             }
         ]
     };
