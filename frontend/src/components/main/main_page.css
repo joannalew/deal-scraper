@@ -60,10 +60,6 @@
     margin-bottom: 20px;
 }
 
-.main-page-list li:before {
-    content: '- ';
-}
-
 .main_image {
     margin-top: 50px;
     height: 500px;

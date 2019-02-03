@@ -37,6 +37,9 @@
     text-decoration: none;
     border-radius: 10px;
     color: limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* -webkit-text-stroke: 1px black; */
 }
 
