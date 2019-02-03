@@ -6,10 +6,12 @@ class MainPage extends React.Component {
 
     render() {
         return (
+            <div>
             <div className="main_page_wrapper">
                 <div className='main-page-inner'>
                     <div className="main_page">
                         {/* <div className="main_block_left"></div> */}
+                        <div className='overlay'></div>
                         <div className="main_words">
                             <h1 className="main_title">Deal Cliq</h1>
                             <h2 className="main_description">The Best Deals at the Tip of Your Fingers</h2>
@@ -20,23 +22,23 @@ class MainPage extends React.Component {
                                 <li>If you're not satisfied, we're not satisfied</li>
                             </ul>
                         </div>
-                        <div className="main_image"></div>
-                        <div className="main_block_right"></div>
+                        {/* <div className="main_image"></div>
+                        <div className="main_block_right"></div> */}
                     </div>
                 </div>
-                <div className='line'></div>
-                <div className='main-page-inner'>
-                    <div className="main_page_items">
-                        {/* <div className="main_items_block_left"></div> */}
-                        <div className="main_page_items_title">Recently Viewed Items</div>
-                        <div className='recently-viewed-items'>
-                            <RecentlyViewedItemsContainer />
-                        </div>
+            </div>
+            <div className='main-page-inner'>
+                <div className="main_page_items">
+                    {/* <div className="main_items_block_left"></div> */}
+                    <div className="main_page_items_title">Recently Viewed Items</div>
+                    <div className='recently-viewed-items'>
+                        <RecentlyViewedItemsContainer />
                     </div>
-                    <footer>
-                        
-                    </footer>
                 </div>
+                <footer>
+                    
+                </footer>
+            </div>
             </div>
         );
     }

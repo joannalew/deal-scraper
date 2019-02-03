@@ -8,7 +8,7 @@
     margin-right: 5px;
     margin-bottom: 10px;
     font-size: 20px;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .session_links_button {
@@ -22,12 +22,12 @@
     margin-right: 5px;
     margin-bottom: 10px;
     font-size: 20px;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .session_links a:hover {
-    background: goldenrod;
-    color: antiquewhite;
+    background: limegreen;
+    color: black;
 }
 
 .session_links a {
@@ -36,13 +36,13 @@
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
-    color: antiquewhite;
-    -webkit-text-stroke: 1px black;
+    color: limegreen;
+    /* -webkit-text-stroke: 1px black; */
 }
 
 .session_links button:hover {
-    background: goldenrod;
-    color: antiquewhite;
+    background: limegreen;
+    color: black;
 }
 
 .session_links button {
@@ -51,24 +51,31 @@
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
-    color: antiquewhite;
-    -webkit-text-stroke: 1px black;
+    color: black;
+    /* -webkit-text-stroke: 1px black; */
 }
 
 .navbar_header_wrapper {
-    position: relative;
-    min-width: 1020px;
-    border-bottom: 3px solid rgba(250, 235, 215, 0.8);
-
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    /* min-width: 1020px; */
+    width: 100%;
+    /* margin: 0 auto; */
+    /* border-bottom: 3px solid rgba(250, 235, 215, 0.8); */
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    background: grey;
 }
 
 .navbar_header {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    /* align-items: stretch; */
     height: 50px;
-    max-width: 1020px;
-    margin: auto;
+    width: 1020px;
+    margin: 0 auto;
 }
 
 .fa-hand-holding-usd {
@@ -76,7 +83,7 @@
     margin-left: 10px;
     margin-top: 10px;
     font-size: 30px;
-    color: goldenrod;
-    -webkit-text-stroke: 1px black;
+    color: limegreen;
+    /* -webkit-text-stroke: 1px black; */
     text-decoration: none;
 }
