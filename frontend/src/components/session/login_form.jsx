@@ -64,7 +64,7 @@ class LoginForm extends React.Component {
             <div className='session-form-wrapper'>
                 <div className='session-form'>
                     <form className='session-login-form' onSubmit={this.handleSubmit}>
-                        <label className='session-form-header'>Login</label>
+                        <label className='session-form-header'>Log In</label>
                         <input 
                             className='session-form-input'
                             required
@@ -81,13 +81,13 @@ class LoginForm extends React.Component {
                             onChange={this.update('password')}
                             placeholder="Password"
                             />
-                        <input id='form-submit' type='submit' value='Login'/>
-                        <input id='form-submit' onClick={this.demoLogin} type='submit' value='Demo'/>
+                        <button id='form-submit'>Log In</button>
+                        <button id='form-demo-login' onClick={this.demoLogin}>Demo Log In</button>
                         {this.renderErrors()}
                     </form>
                     <div className='session-form-image-wrapper'>
                         <div className='session-form-image'>
-                            <Link to='/'><i className="fas fa-hand-holding-usd"></i></Link>
+                            <Link to='/'><img className="shopping-photo" src="https://i.imgur.com/hC7SvUC.jpg" alt="shop"></img></Link>
                         </div>
                     </div>
                 </div>

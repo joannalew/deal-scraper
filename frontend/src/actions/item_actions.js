@@ -8,38 +8,37 @@ export const RECEIVE_NEW_ITEM = "RECEIVE_NEW_ITEM";
 export const getItem = id => dispatch => {
     return APIUtil.getItem(id)
                   .then((res) => dispatch(receiveItem(res)))
-                  .catch(err => console.log(err));
+                  .catch(err => dispatch(receiveErrors(err)))
 };
 
 export const recentlyViewed = () => dispatch => {
-
     return APIUtil.recentlyViewed()
         .then((res) => dispatch(receiveItems(res)))
-        .catch(err => console.log(err));
+        .catch(err => dispatch(receiveErrors(err)))
 }
 
 export const createNewItem = data => dispatch => (
     APIUtil.createItem(data)
            .then(item => dispatch(receiveNewItem(item)))
-           .catch(err => console.log(err))
+           .catch(err => dispatch(receiveErrors(err)))
 );
 
 export const addFollower = data => dispatch => (
     APIUtil.addFollower(data)
            .then(item => dispatch(receiveItem(item)))
-           .catch(err => console.log(err))
+           .catch(err => dispatch(receiveErrors(err)))
 );
 
 export const removeFollower = data => dispatch => (
     APIUtil.deleteFollower(data)
            .then(item => dispatch(receiveItem(item)))
-           .catch(err => console.log(err))
+           .catch(err => dispatch(receiveErrors(err)))
 );
 
 export const getFollows = user => dispatch => (
     APIUtil.getFollowing(user)
            .then(items => dispatch(receiveItems(items)))
-           .catch(err => console.log(err))
+           .catch(err => dispatch(receiveErrors(err)))
 )
     
 const receiveNewItem = item => ({
