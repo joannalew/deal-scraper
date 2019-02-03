@@ -116,33 +116,38 @@
 
 .ul-results {
     background: transparent;
-    max-width: 1000px;
+    max-width: 1020px;
     margin: auto;
-    height: 500px;
+    /* height: 500px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .ul-results li {
-    padding-left: 20px;
-    padding-top: 20px;
+    /* padding-left: 20px;
+    padding-top: 20px; */
     list-style: none;
-    width: 33%;
-    margin: 75px;
+    width: 30%;
+    /* margin: 75px; */
     font-family: 'Open Sans', sans-serif;
     /* -webkit-text-stroke: 1px black; */
     color: black;
 }
 
-.ul-results:hover {
-    background-color: rgba(185, 185, 182, 0.3)
+.ul-results li:nth-child(3n + 2) {
+    margin: 50px;
+    margin-top: 0px;
 }
+
+/* .ul-results:hover {
+    background-color: rgba(185, 185, 182, 0.3)
+} */
 
 .search-result-item {
     width: 33%;
-    height: ;
+    /* height: ; */
 }
 
 .image-container {
