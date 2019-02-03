@@ -1,0 +1,50 @@
+footer {
+    border-top: 1px solid black;
+    /* background: #054a79; */
+    /* color: white; */
+}
+
+.footer-outer {
+    min-width: 1020px;;
+}
+
+.footer-inner {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 50px;
+    margin: 15px 0px;
+}
+
+.developer-info {
+    display: flex;
+}
+
+.developer {
+    margin: 0px 15px;
+}
+
+.person-name {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.person-links {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    color: black;
+}
+
+.person-links .fas {
+    color: black;
+}
+
+.person-links .fab {
+    color: black;
+}
