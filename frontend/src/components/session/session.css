@@ -26,9 +26,9 @@ a {
 
 .session-form {
     display: flex;
-    max-width: 1020px;
+    max-width: 960px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -45,25 +45,41 @@ a {
 .session-form form input {
     font-size: 15px;
     width: 50%;
-    margin: 9px 0;
-    padding: 3px;
+    margin: 7px 0;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+}
+
+#form-submit, #form-demo-login {
+    position: relative;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 7px;
+    background: black;
+    color: white;
+    border-radius: 4px;
+    width: 50%;
+    margin: 5px 0;
+    transition: all 0.2s ease-in-out;
 }
 
 #form-submit {
-    font-weight: 700;
-    font-size: 15px;
-    padding: 5px;
-    background: black;
-    color: antiquewhite;
-    border-radius: 10px;
+    margin-top: 13px;
 }
 
-#form-submit:hover {
+#form-submit:hover, #form-demo-login:hover {
+    background-color: #0088BB;
     cursor: pointer;
-    background: goldenrod;
-    color: antiquewhite;
-    /* -webkit-text-stroke: 1px black; */
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
 }
+
+.session-form input::placeholder {
+    color: #BDBDBD;
+}
+
+
+
 
 .session-form-header {
     text-align: center;

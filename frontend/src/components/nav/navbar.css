@@ -26,7 +26,7 @@
 }
 
 .session_links a:hover {
-    background: limegreen;
+    background: white;
     color: black;
 }
 
@@ -36,7 +36,7 @@
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
-    color: limegreen;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@
 }
 
 .session_links button:hover {
-    background: limegreen;
+    background: white;
     color: black;
 }
 
@@ -69,7 +69,7 @@
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    background: grey;
+    background: #054a79;
 }
 
 .navbar_header {
@@ -86,7 +86,7 @@
     margin-left: 10px;
     margin-top: 10px;
     font-size: 30px;
-    color: limegreen;
+    color: white;
     /* -webkit-text-stroke: 1px black; */
     text-decoration: none;
 }

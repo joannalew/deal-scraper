@@ -15,6 +15,7 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -26,6 +27,16 @@ class SignupForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.signup(this.state);
+    }
+
+    demoLogin(e) {
+        e.preventDefault();
+        let user = {
+            email: 'demouser@demo.com',
+            password: 'password'
+        }
+
+        this.props.login(user)
     }
 
     renderErrors() {
@@ -50,7 +61,7 @@ class SignupForm extends React.Component {
             <div className='session-form-wrapper'>
                 <div className='session-form'>
                     <form className='session-login-form' onSubmit={this.handleSubmit}>
-                        <label className='session-form-header'>Signup</label>
+                        <label className='session-form-header'>Sign Up</label>
                         <input
                             required
                             type="text"
@@ -79,7 +90,9 @@ class SignupForm extends React.Component {
                             onChange={this.update('password2')}
                             placeholder="Confirm Password"
                         />
-                        <input id='form-submit' type="submit" value="Signup"/>
+                        <button id='form-submit'>Sign Up</button>
+                        <button id='form-demo-login' onClick={this.demoLogin}>Demo Log In</button>
+
                         {this.renderErrors()}
                     </form>
                     <div className='session-form-image-wrapper'>
