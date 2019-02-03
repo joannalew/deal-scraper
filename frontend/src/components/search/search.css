@@ -69,7 +69,7 @@
 }
 
 .radio-container:hover .circle {
-    background-color: rgba(250, 235, 215, 0.13);
+    background-color: aliceblue;
 }
 
 .radio-container input:checked + .circle {
