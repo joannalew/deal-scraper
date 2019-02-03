@@ -6,7 +6,7 @@
 .item-show-page {
     max-width: 1000px;
     margin: auto;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: antiquewhite;
     -webkit-text-stroke: 1px black;
     font-size: 30px;
@@ -14,7 +14,7 @@
 
 .item-show-title {
     font-size: 30px;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: antiquewhite;
     -webkit-text-stroke: 1px black;
     text-align: center;
@@ -71,7 +71,7 @@
     height: 100%;
     width: 100%;
     font-size: 30px;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
