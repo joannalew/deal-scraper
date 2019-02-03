@@ -26,8 +26,8 @@
 }
 
 .session_links a:hover {
-    background: goldenrod;
-    color: antiquewhite;
+    background: limegreen;
+    color: black;
 }
 
 .session_links a {
@@ -36,13 +36,13 @@
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
-    color: antiquewhite;
-    -webkit-text-stroke: 1px black;
+    color: limegreen;
+    /* -webkit-text-stroke: 1px black; */
 }
 
 .session_links button:hover {
-    background: goldenrod;
-    color: antiquewhite;
+    background: limegreen;
+    color: black;
 }
 
 .session_links button {
@@ -51,8 +51,8 @@
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
-    color: antiquewhite;
-    -webkit-text-stroke: 1px black;
+    color: black;
+    /* -webkit-text-stroke: 1px black; */
 }
 
 .navbar_header_wrapper {
@@ -66,7 +66,7 @@
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    background: lightblue;
+    background: grey;
 }
 
 .navbar_header {
@@ -83,7 +83,7 @@
     margin-left: 10px;
     margin-top: 10px;
     font-size: 30px;
-    color: goldenrod;
-    -webkit-text-stroke: 1px black;
+    color: limegreen;
+    /* -webkit-text-stroke: 1px black; */
     text-decoration: none;
 }
