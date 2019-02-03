@@ -32,7 +32,7 @@ class SignupForm extends React.Component {
     demoLogin(e) {
         e.preventDefault();
         let user = {
-            email: 'demouser@demo.com',
+            email: 'janedoe@example.com',
             password: 'password'
         }
 

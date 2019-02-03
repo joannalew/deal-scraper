@@ -2,14 +2,15 @@
     width: 200px;
     height: 200px;
     overflow: hidden;
-    object-fit: cover;
+    background-image: url('../../assets/profile-img.jpg');
+    background-size: cover;
 }
 
 .user-profile-details {
     padding-left: 40px;
-    color: antiquewhite;
+    color: black;
     font-family: 'Open Sans', sans-serif;
-    -webkit-text-stroke: 1px black;
+    /* -webkit-text-stroke: 1px black; */
 }
 
 .user-profile-details div {
@@ -28,32 +29,41 @@
 }
 
 .user-profile-watchlist {
-    height: 500px;
-    max-width: 1000px;
-    margin: auto;
+    /* height: 500px; */
+    max-width: 1020px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    overflow: scroll; 
+    /* overflow: scroll;  */
 }
 
-.user-profile-watchlist:hover {
+/* .user-profile-watchlist:hover {
     background-color: rgba(185, 185, 182, 0.3);
-}
+} */
 
 .user-profile-watchlist li {
-    padding-left: 20px;
-    padding-top: 20px;
+    /* padding-left: 20px;
+    padding-top: 20px; */
     list-style: none;
-    width: 33%;
-    margin: 75px;
+    width: 30%;
+    /* margin: 75px; */
     font-family: 'Open Sans', sans-serif;
-    -webkit-text-stroke: 1px black;
-    color: antiquewhite;
+    /* -webkit-text-stroke: 1px black; */
+    color: black;
+}
+
+.user-profile-watchlist li:nth-child(3n + 2) {
+    margin: 50px;
+    margin-top: 0px;
 }
 
 .user-profile-watchlist li a {
     font-family: 'Open Sans', sans-serif;
-    -webkit-text-stroke: 1px black;
-    color: antiquewhite;
+    /* -webkit-text-stroke: 1px black; */
+    color: black;
     
+}
+
+.spacer {
+    height: 50px;
 }
