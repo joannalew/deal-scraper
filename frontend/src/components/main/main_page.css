@@ -1,6 +1,6 @@
 .main_page_wrapper {
     min-width: 1000px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../assets/deal-cliq-splash.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../../assets/deal-cliq-splash.jpg');
     background-size: cover;
     background-position: 50%;
 }
@@ -91,7 +91,6 @@
     text-align: center;
     font-size: 40px;
     color: black;
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Open Sans', sans-serif;
 }
 
