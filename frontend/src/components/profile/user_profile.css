@@ -2,7 +2,8 @@
     width: 200px;
     height: 200px;
     overflow: hidden;
-    object-fit: cover;
+    background-image: url('../../assets/profile-img.jpg');
+    background-size: cover;
 }
 
 .user-profile-details {
