@@ -16,8 +16,8 @@ class RecentlyViewedItems extends React.Component {
                     <div className='image'>
                         <img src={item.storeImg} alt=""/>
                     </div>
-                    <div>{item.title}</div>
-                    <div>{item.price}</div>
+                    <div className="recent-item-title">{item.title}</div>
+                    <div className="recent-item-price">{item.price}</div>
                 </Link>
             )
         });
