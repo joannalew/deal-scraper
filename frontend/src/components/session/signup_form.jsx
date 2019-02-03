@@ -97,7 +97,7 @@ class SignupForm extends React.Component {
                     </form>
                     <div className='session-form-image-wrapper'>
                         <div className='session-form-image'>
-                            <Link to='/'><i className="fas fa-hand-holding-usd"></i></Link>
+                            <Link to='/'><img className="shopping-photo" src="https://i.imgur.com/hC7SvUC.jpg"></img></Link>
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@
 .session-form-image-wrapper {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 50%;
 }
 
@@ -89,4 +90,10 @@ a {
 
 .filler {
     height: 550px;
+}
+
+.shopping-photo {
+    height: 350px;
+    width: 350px;
+    cursor: pointer;
 }
