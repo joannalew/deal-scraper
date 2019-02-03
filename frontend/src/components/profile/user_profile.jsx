@@ -24,6 +24,7 @@ class UserProfile extends React.Component {
 
         return (
             <div className='user-profile'>
+                <div className='spacer'></div>
                 <div className='user-profile-info'>
                     <div >
                         <img className='user-profile-img' src="https://profiles.utdallas.edu/img/default.png" alt=""/>
