@@ -87,7 +87,7 @@ class LoginForm extends React.Component {
                     </form>
                     <div className='session-form-image-wrapper'>
                         <div className='session-form-image'>
-                            <Link to='/'><img className="shopping-photo" src="https://i.imgur.com/hC7SvUC.jpg"></img></Link>
+                            <Link to='/'><img className="shopping-photo" src="https://i.imgur.com/hC7SvUC.jpg" alt="shop"></img></Link>
                         </div>
                     </div>
                 </div>

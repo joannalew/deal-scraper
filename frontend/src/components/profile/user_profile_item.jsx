@@ -23,7 +23,7 @@ const UserProfileItem = ( props ) => {
         <li>
         <Link to={`/item/${props.item._id}`}>
             <div className='image'>
-                <img src={ props.item.storeImg } />
+                <img src={ props.item.storeImg } alt="item"/>
             </div>
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>

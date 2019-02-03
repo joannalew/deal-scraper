@@ -2,11 +2,7 @@ import React from 'react';
 import SearchResultItemContainer from './search_result_item_container';
 import {withRouter} from 'react-router-dom'
 
-class SearchResult extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
+class SearchResult extends React.Component {    
     render() {
         let results = this.props.items.map((item, idx) => {
             return (

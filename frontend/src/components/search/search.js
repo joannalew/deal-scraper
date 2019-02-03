@@ -37,21 +37,21 @@ class Search extends React.Component {
                             <div>
                                 <label className="radio-container">
                                     <input type='radio' name='store' value='ebay' onChange={this.update('store')} />
-                                    <span class="circle"></span>
+                                    <span className="circle"></span>
                                     <p>Ebay</p>
                                 </label>
                             </div>
                             <div>
                                 <label className="radio-container">
                                     <input type='radio' name='store' value='etsy' onChange={this.update('store')} />
-                                    <span class="circle"></span>
+                                    <span className="circle"></span>
                                     <p>Etsy</p>
                                 </label>
                             </div>
                             <div>
                                 <label className="radio-container">
                                     <input type='radio' name='store' value='amazon' onChange={this.update('store')} />
-                                    <span class="circle"></span>
+                                    <span className="circle"></span>
                                     <p>Amazon</p>
                                 </label>
                             </div>

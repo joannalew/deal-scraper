@@ -65,6 +65,7 @@
 
 .radio-container p {
     display: inline;
+    color: black;
 }
 
 .radio-container:hover .circle {
