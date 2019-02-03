@@ -31,8 +31,8 @@
 }
 
 .session_links a {
-    margin: 0 5px;
-    padding: 4px;
+    margin: 0 2px;
+    padding: 4px 7px;
     background: transparent;
     text-decoration: none;
     border-radius: 10px;
