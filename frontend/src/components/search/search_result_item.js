@@ -21,7 +21,7 @@ const SearchResultItem = ( props ) => {
     return (
         <li className="search-result-item">
             <div className='image-container'>
-                <img src={props.item.storeImg} alt="item"/>
+                <a href={props.item.storeUrl} target='_blank'><img src={props.item.storeImg} alt="item"/></a>
             </div>
             <div>{ props.item.title }</div>
             <div>{ props.item.price }</div>
