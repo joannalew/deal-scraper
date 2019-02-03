@@ -35,9 +35,6 @@ class MainPage extends React.Component {
                         <RecentlyViewedItemsContainer />
                     </div>
                 </div>
-                <footer>
-                    
-                </footer>
             </div>
             </div>
         );
