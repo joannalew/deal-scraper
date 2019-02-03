@@ -7,9 +7,9 @@
 
 .user-profile-details {
     padding-left: 40px;
-    color: antiquewhite;
+    color: black;
     font-family: 'Open Sans', sans-serif;
-    -webkit-text-stroke: 1px black;
+    /* -webkit-text-stroke: 1px black; */
 }
 
 .user-profile-details div {
@@ -47,13 +47,17 @@
     width: 33%;
     margin: 75px;
     font-family: 'Open Sans', sans-serif;
-    -webkit-text-stroke: 1px black;
-    color: antiquewhite;
+    /* -webkit-text-stroke: 1px black; */
+    color: black;
 }
 
 .user-profile-watchlist li a {
     font-family: 'Open Sans', sans-serif;
-    -webkit-text-stroke: 1px black;
-    color: antiquewhite;
+    /* -webkit-text-stroke: 1px black; */
+    color: black;
     
+}
+
+.spacer {
+    height: 50px;
 }
