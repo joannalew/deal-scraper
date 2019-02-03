@@ -1,4 +1,4 @@
-function footer() {
+function Footer() {
     return (
         <div className='footer'>
             <div className='footer-title'>Meet the Developers</div>
@@ -36,3 +36,5 @@ function footer() {
         </div>
     )
 }
+
+export default Footer;
