@@ -23,8 +23,8 @@ const SearchResultItem = ( props ) => {
             <div className='image-container'>
                 <a href={props.item.storeUrl} target='_blank'><img src={props.item.storeImg} alt="item"/></a>
             </div>
-            <div>{ props.item.title }</div>
-            <div>{ props.item.price }</div>
+            <div className="search-item-title">{ props.item.title }</div>
+            <div className="search-item-price">{ props.item.price }</div>
             <div>
                 { getButton(props.item, props.currentUser, props.createNewItem, props) }
             </div>
