@@ -23,6 +23,10 @@ footer {
     font-weight: 700;
 }
 
+.footer-portfolio i:hover, .footer-github i:hover {
+    color: #000;
+}
+
 .developer-info {
     display: flex;
 }
