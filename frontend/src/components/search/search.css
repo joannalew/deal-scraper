@@ -112,6 +112,7 @@
 .ul-results-wrapper {
     margin-top: 50px;
     min-width: 1000px;
+    min-height: 55vh;
 }
 
 .ul-results {
