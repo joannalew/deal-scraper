@@ -1,6 +1,6 @@
 .main_page_wrapper {
     min-width: 1000px;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../../assets/deal-cliq-splash.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) ), url('../../assets/deal-cliq-splash.jpg');
     background-size: cover;
     background-position: 50%;
 }
@@ -24,36 +24,35 @@
 
 .main_title {
     font-size: 50px;
+    font-family: 'Open Sans', cursive;
+    margin-bottom: 3px;
 
 }
 .main_words {
-    margin-top: 50px;
-    height: 500px;
-    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 400px;
+    width: 48%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    /* background-image: url('../../assets/deal-cliq-splash.jpg'); */
-    /* background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../assets/deal-cliq-splash.jpg'); */
     background-size: cover;
-}
-
-.overlay {
-
+    border-radius: 45px;
+    background: rgba(0, 0, 0, 0.59);
 }
 
 .main_description {
-    font-size: 22px;
+    font-size: 25px;
     /* color: teal; */
     font-family: 'Open Sans', sans-serif;
 }
 
 .main-page-list {
     list-style: none;
-    font-size: 18px;
+    font-size: 20px;
     padding-inline-start: 0;
     display: flex;
     flex-direction: column;

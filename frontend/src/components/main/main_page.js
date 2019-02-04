@@ -10,8 +10,6 @@ class MainPage extends React.Component {
             <div className="main_page_wrapper">
                 <div className='main-page-inner'>
                     <div className="main_page">
-                        {/* <div className="main_block_left"></div> */}
-                        <div className='overlay'></div>
                         <div className="main_words">
                             <h1 className="main_title">Deal Cliq</h1>
                             <h2 className="main_description">The Best Deals at Your Fingertips</h2>
