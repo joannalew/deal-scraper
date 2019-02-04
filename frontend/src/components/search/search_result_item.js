@@ -12,7 +12,7 @@ const getButton = function(item, user, createFunc, props) {
         return (<div></div>);
     }
     else {
-        return (<button onClick={ handleClick(item, user, createFunc, props) }>Save Item</button>);
+        return (<button className="follow-btn" onClick={ handleClick(item, user, createFunc, props) }>Save Item</button>);
     }
 }
 
@@ -25,7 +25,7 @@ const SearchResultItem = ( props ) => {
             </div>
             <div className="search-item-title">{ props.item.title }</div>
             <div className="search-item-price">{ props.item.price }</div>
-            <div>
+            <div className="follow-btn-container">
                 { getButton(props.item, props.currentUser, props.createNewItem, props) }
             </div>
         </li>
