@@ -10,12 +10,16 @@
     padding-left: 40px;
     color: black;
     font-family: 'Open Sans', sans-serif;
-    /* -webkit-text-stroke: 1px black; */
+    font-size: 25px;
 }
 
 .user-profile-details div {
     padding: 8px 0;
-    font-size: 32px;
+}
+
+.user-profile-username {
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .user-profile-info {
