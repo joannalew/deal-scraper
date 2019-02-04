@@ -4,6 +4,7 @@
     overflow: hidden;
     background-image: url('../../assets/profile-img.jpg');
     background-size: cover;
+    border-radius: 4px;
 }
 
 .user-profile-details {
@@ -29,7 +30,7 @@
     margin: auto;
 }
 .user-profile {
-    min-width: 1000px
+    min-width: 1040px
 }
 
 .user-profile-watchlist {
@@ -70,4 +71,38 @@
 
 .spacer {
     height: 50px;
+}
+
+.watchlist-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.user-item-price, .user-item-title {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.follow-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.follow-btn {
+    font-weight: 700;
+    font-size: 15px;
+    padding: 7px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.follow-btn:hover {
+    cursor: pointer;
+    background-color: #0088BB;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
 }
