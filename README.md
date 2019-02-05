@@ -2,7 +2,7 @@
 
 [DealCliq Live](http://deal-cliq.herokuapp.com/#/)
 
-![dealcliq](https://i.imgur.com/yLPO1TI.jpg)
+![dealcliq](https://i.imgur.com/F60E5cS.jpg)
 
 DealCliq is a site aggregator that pulls item prices from Etsy, Ebay, and Amazon. Users can follow items all on one site and easily track the item's price with a price graph.
 
@@ -25,4 +25,5 @@ Tired of buying something online and seeing the same item on sale the day after?
 #### Search
 Users can search for items by typing the item name in the search bar. If a user doesn't specify a site to search, DealCliq queries Ebay by default. Users can then scroll through the search result and follow items they wish to track.
 
-![dealcliq-search](https://i.imgur.com/J6eHgZl.jpg)
+![dealcliq-search](https://i.imgur.com/0KgzAwC.jpg)
+
