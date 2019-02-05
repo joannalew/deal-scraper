@@ -3,7 +3,6 @@ import PriceChart from './price_chart';
 
 
 class PriceGraph extends Component { 
-
     state = {
         datasets: [
             {
@@ -11,11 +10,11 @@ class PriceGraph extends Component {
                 values: [
                     Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
                     Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
-                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
-                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
-                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
-                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
-                    Math.round((Math.random() * (1.1 - 0.9) + 0.9).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100
+                    Math.round((Math.random() * (1.05 - 0.95) + 0.95).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
+                    Math.round((Math.random() * (1.05 - 0.95) + 0.95).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
+                    Math.round((Math.random() * (1.05 - 0.95) + 0.95).toFixed(4) * this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
+                    Math.round(this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100,
+                    Math.round(this.props.itemPrice.match(/\d/g).join("")/100 * 100)/100
                 ]
             }
         ]

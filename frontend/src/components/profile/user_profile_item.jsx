@@ -11,10 +11,10 @@ const removeFollowClick = function(item, user, removeFunc) {
 
 const getButton = function(item, user, addFunc, removeFunc) {
     if (item.followers.includes(user.id)) {
-        return (<button onClick={ removeFollowClick(item, user, removeFunc) }>Unfollow Item</button>);
+        return (<button className="follow-btn" onClick={ removeFollowClick(item, user, removeFunc) }>Unfollow Item</button>);
     }
     else {
-        return (<button onClick={ addFollowClick(item, user, addFunc) }>Follow Item</button>);
+        return (<button className="follow-btn" onClick={ addFollowClick(item, user, addFunc) }>Follow Item</button>);
     }
 };
 
@@ -25,10 +25,10 @@ const UserProfileItem = ( props ) => {
             <div className='image'>
                 <img src={ props.item.storeImg } alt="item"/>
             </div>
-            <div>{ props.item.title }</div>
-            <div>{ props.item.price }</div>
+            <div className="user-item-title">{ props.item.title }</div>
+            <div className="user-item-price">{ props.item.price }</div>
         </Link>
-            <div>
+            <div className="follow-btn-container">
                 { getButton(props.item, props.currentUser, props.addFollower, props.removeFollower) }
             </div>
         </li>

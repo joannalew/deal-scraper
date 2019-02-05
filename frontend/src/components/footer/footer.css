@@ -3,6 +3,7 @@ footer {
     font-family: 'Open Sans', sans-serif;
     background: #054a79;
     color: white;
+    margin-top: 50px;
 }
 
 .footer-outer {
@@ -21,6 +22,10 @@ footer {
     font-size: 35px;
     margin: 15px 0px;
     font-weight: 700;
+}
+
+.footer-portfolio i:hover, .footer-github i:hover {
+    color: #000;
 }
 
 .developer-info {

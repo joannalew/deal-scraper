@@ -25,6 +25,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.session_links_button:hover {
+    cursor: pointer;
+}
+
 .session_links a:hover {
     background: white;
     color: black;

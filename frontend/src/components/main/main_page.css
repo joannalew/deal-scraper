@@ -1,3 +1,7 @@
+.main-page-outer {
+    min-width: 1020px;
+}
+
 .main_page_wrapper {
     min-width: 1000px;
     background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) ), url('../../assets/deal-cliq-splash.jpg');
@@ -6,8 +10,9 @@
 }
 
 .main-page-inner {
+    min-width: 1000px;
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .main_page {
@@ -107,7 +112,7 @@
 
 .recently-viewed-items {
     /* height: 500px; */
-    width: 1000px;
+    /* width: 1000px; */
     /* overflow: scroll; */
     margin-bottom: 60px;
 }
