@@ -1,22 +1,20 @@
 .item-show-wrapper {
     min-width: 1000px;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .item-show-page {
     max-width: 1000px;
     margin: auto;
     font-family: 'Open Sans', sans-serif;
-    color: antiquewhite;
-    -webkit-text-stroke: 1px black;
+    color: #000;
     font-size: 30px;
 }
 
 .item-show-title {
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
-    color: antiquewhite;
-    -webkit-text-stroke: 1px black;
+    color: #000;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -37,11 +35,14 @@
 }
 
 .item-show-page a {
-    text-decoration: underline;
-    color: antiquewhite;
-    -webkit-text-stroke: 1px silver;
+    color: #000;
     margin-right: 7px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+}
+
+.item-show-page a:hover {
+    cursor: pointer;
+    color: #0088BB;
 }
 
 .price-info {
