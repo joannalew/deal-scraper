@@ -25,7 +25,7 @@ Tired of buying something online and seeing the same item on sale the day after?
 #### Search
 Users can search for items by typing the item name in the search bar. If a user doesn't specify a site to search, DealCliq queries Ebay by default. Users can then scroll through the search result and follow items they wish to track.
 
-![dealcliq-search](https://i.imgur.com/0KgzAwC.jpg)
+![dealcliq-search](https://i.imgur.com/7EeaAXl.jpg)
 
 #### Follow
 Users can follow items they want to track by clicking the "Save Item" or "Follow" buttons. The items are grouped together and listed on the user's profile page, so they can see all the items they're tracking in one easy place.
