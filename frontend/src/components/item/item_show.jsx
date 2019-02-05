@@ -25,12 +25,15 @@ class ItemShow extends React.Component {
     }
 
     getButton() {
-        if (this.props.item.followers.includes(this.props.user.id)) {
-            return (<button className="follow-btn" onClick={ this.removeFollowClick() }>Unfollow Item</button>);
+        if (this.props.user) {
+            if (this.props.item.followers.includes(this.props.user.id)) {
+                return (<button className="follow-btn" onClick={ this.removeFollowClick() }>Unfollow Item</button>);
+            }
+            else {
+                return (<button className="follow-btn" onClick={ this.addFollowClick() }>Follow Item</button>);
+            }
         }
-        else {
-            return (<button className="follow-btn" onClick={ this.addFollowClick() }>Follow Item</button>);
-        }
+        
     }
 
     render() {
