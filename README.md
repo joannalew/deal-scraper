@@ -27,6 +27,10 @@ Users can search for items by typing the item name in the search bar. If a user 
 
 ![dealcliq-search](https://i.imgur.com/0KgzAwC.jpg)
 
+#### Follow
+Users can follow items they want to track by clicking the "Save Item" or "Follow" buttons. The items are grouped together and listed on the user's profile page, so they can see all the items they're tracking in one easy place.
+
+![dealcliq-follow](https://i.imgur.com/Q1G6UNE.jpg)
 
 #### Cool Code
 To pull the items from Etsy, we first make a single API call to Etsy to see what items are available for purchase on Etsy's site.
